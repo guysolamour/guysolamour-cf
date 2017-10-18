@@ -169,6 +169,8 @@ pip-log.txt
 
 # parce que trop lourd
 node_modules/
+gulp-tasks/
+img/
 
 # parce que certaines personnes utilisent de vrais IDEs
 .idea

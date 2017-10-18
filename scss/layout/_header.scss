@@ -3,4 +3,57 @@
    ======================= */
 
 .l-header {
+    position: relative;
+    width: 100%;
+    height: rem-convert("rem", 450px);
+    //background-color: rgba(black, 0.5);
+}
+
+.down-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: rem-convert("rem", -5px);
+    // tac can be used with img
+    /*text-align: center;
+    margin-top: -50px;*/
+}
+
+.l-header--top {
+    background-color: #001122;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 66px;
+    .logo {
+        padding-left: rem-convert("rem", 16px);
+    }
+    .menu {
+        padding-right: rem-convert("rem", 16px);
+    }
+}
+
+.l-header--bg {
+    background: url("../img/header.jpg") center top fixed;
+    background-size: cover;
+    width: 100%;
+    height: rem-convert("rem", 400px);
+}
+
+.header-baseline {
+    padding-top: rem-convert("rem", 220px);
+    text-align: center;
+    &-l1 {
+        font-size: rem-convert("rem", 25px);
+        ;
+        font-weight: bold;
+        strong {
+            color: #cd2542;
+        }
+    }
+    &-l2 {
+        font-size: rem-convert("rem", 25px);
+        ;
+        font-family: "20th Century Font";
+        font-weight: normal;
+    }
 }

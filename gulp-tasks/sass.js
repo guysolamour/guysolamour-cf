@@ -8,7 +8,7 @@ module.exports = function() {
     return gulp.src(config.scss.src)
         .pipe($.sourcemaps.init())
         .pipe($.plumber({
-            //errorHandler: $.notify.onError("ERROR: SASS Compilation Failed")
+            errorHandler: $.notify.onError("ERROR: SASS Compilation Failed")
         }))
         .pipe($.sass())
         .pipe($.csscomb())

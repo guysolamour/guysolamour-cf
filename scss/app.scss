@@ -23,7 +23,7 @@
 
 /* Base */
 
-@import "base/index";
+@import "base/base";
 
 /* Utilities */
 
@@ -32,6 +32,7 @@
 /* Layouts */
 
 @import "layout/constrained";
+@import "layout/header";
 
 /* Modules */
 

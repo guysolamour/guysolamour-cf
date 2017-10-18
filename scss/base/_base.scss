@@ -1,43 +1,36 @@
-/*@viewport { width: device-width; }
+@viewport {
+    width: device-width;
+}
 
+// VARIABLES
+$font-family: "open sans";
+$color-link: blue;
 html {
-  background-color: $color-background;
-  box-sizing: border-box;
-  height: 100%;
+    //background-color: $color-background;
+    box-sizing: border-box;
+    height: 100%;
 }
 
 * {
-  &:before,
-  &:after { box-sizing: inherit; }
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  color: $color-text;
-  font-family: $font-family-default;
-  min-height: 100%;
-  overflow-x: hidden;
-  text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    //color: $color-text;
+    font-family: $font-family;
+    min-height: 100%;
+    //overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
 }
 
 a {
-  background: transparent;
-  color: $color-link;
-  text-decoration: none;
-  transition: color .2s;
+    //background: transparent;
+    color: $color-link;
+    //text-decoration: none;
+    //transition: color .2s;
 }
-
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-family-display;
-  font-weight: normal;
-}*/
