@@ -1,0 +1,12 @@
+@import "./knacss/knacss";
+
+$color : aqua;
+
+.container {
+	background: $color;
+	@include grid()
+}
+// .color {
+// 	@include grid(2);
+// }
+//@include respond-to(tiny)

@@ -1,0 +1,49 @@
+/*
+ * SMACSS + SCSS starter v2.1
+ * Inspired by SMACSS http://smacss.com
+ * Author: @jonathanpath
+ * Date: 4 August 2015
+ *
+ * https://github.com/jonathanpath/SASS-SMACSS
+ * See file structure in http://jonathanpath.com/sass+smacss/scss/style.scss
+ *
+ * Coding rules : https://github.com/necolas/idiomatic-css
+ *
+ */
+
+
+/* Vendor */
+
+@import "libs/normalize/normalize";
+@import "libs/font-awesome/scss/font-awesome";
+@import "libs/named-color/index";
+@import "libs/sass-rem/rem";
+@import "libs/media-queries/media-queries";
+//@import "vendor/foundation";
+
+/* Base */
+
+@import "base/index";
+
+/* Utilities */
+
+@import "utilities/index";
+
+/* Layouts */
+
+@import "layout/constrained";
+
+/* Modules */
+
+@import "modules/box";
+// @include screen(40em, 63.9375em) {}
+//@include screen(40em, 63.9375em) {}
+// @include screen(51rem, 63.9375rem) {
+//     background-color: aqua;
+//     font-size: rem-convert("rem", 24px);
+//     color: k-color(cyan-aqua);
+// }
+
+/* States */
+
+//@import "states/print";
