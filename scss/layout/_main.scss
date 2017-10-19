@@ -33,8 +33,7 @@
         text-align: justify;
     }
     .detail {
-        padding-left: rem-convert("rem", 48px);
-        padding-right: rem-convert("rem", 48px);
+        padding: 0 rem-convert("rem", 48px) rem-convert("rem", 23px) rem-convert("rem", 48px);
         font-weight: bold;
         strong {
             color: #cd2542;

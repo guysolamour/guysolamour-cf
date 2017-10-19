@@ -7,6 +7,7 @@ $font-family: "open sans";
 //$color-link: blue;
 $bgc-color: #f3f3f3;
 $second-color: #ff4800;
+$skills-color: #012;
 html {
     //background-color: $color-background;
     box-sizing: border-box;
@@ -42,4 +43,9 @@ a {
     margin-top: rem-convert("rem", 60px);
     text-align: center;
     font-size: rem-convert("rem", 30px);
+}
+
+.dark-section-title {
+    color: $bgc-color;
+    padding-top: 20px;
 }

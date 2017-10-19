@@ -1,0 +1,79 @@
+/*=============================================
+=            SKILLS VARIABLES            =
+=============================================*/
+
+$progress: white;
+$progress-sub: #66ccff;
+$progress-bar :#2980b9;
+.skills {
+    // margin-top: 50px;
+    background-color: $skills-color;
+    width: 100%;
+    height: rem-convert('rem', 998px);
+    &-description {
+        color: $bgc-color;
+        padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+        font-weight: normal;
+        text-align: justify;
+    }
+}
+
+.progress {
+    background-color: $progress;
+    position: relative;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    margin: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+    margin-bottom: 15px;
+    &-sub {
+        background-color: $progress-sub;
+        position: absolute;
+        width: 20%;
+        left: 0;
+        height: 34px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+    }
+    &-bar {
+        background-color: $progress-bar;
+        position: absolute;
+        left: 35px;
+        height: 34px;
+    }
+    &-per {
+        position: absolute;
+        height: 34px;
+        color: black;
+        right: 10px;
+    }
+}
+
+.html-bar {
+    width: 70%;
+}
+
+.css-bar {
+    width: 65%;
+}
+
+.js-bar {
+    width: 50%;
+}
+
+.php-bar {
+    width: 55%;
+}
+
+.sql-bar {
+    width: 75%;
+}
+
+.wp-bar {
+    width: 40%;
+}
+
+.seo-bar {
+    width: 30%;
+}
