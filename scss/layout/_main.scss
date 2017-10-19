@@ -2,14 +2,53 @@
    Layout/Main
    ======================= */
 
-.l-main {
-
+.section-title {
+    position: relative;
 }
 
-.main-head {
-
+.section-title-bare {
+    position: absolute;
+    width: rem-convert("rem", 95px);
+    height: rem-convert("rem", 5px);
+    background-color: $second-color;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.main-title {
+.portrait {
+    margin-top: rem-convert("rem", 30px);
+    text-align: center;
+}
 
+.description {
+    margin-bottom: 20px;
+    position: relative;
+    .surname {
+        text-align: center;
+        font-weight: bolder;
+    }
+    p {
+        padding-left: rem-convert("rem", 48px);
+        padding-right: rem-convert("rem", 48px);
+        text-align: justify;
+    }
+    .detail {
+        padding-left: rem-convert("rem", 48px);
+        padding-right: rem-convert("rem", 48px);
+        font-weight: bold;
+        strong {
+            color: #cd2542;
+            text-decoration: underline;
+            &:hover {
+                color: $second-color;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+        }
+    }
+}
+
+.surname {
+    font-size: 30px;
+    margin-bottom: 0;
 }

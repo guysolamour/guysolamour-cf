@@ -1,0 +1,21 @@
+.btn {
+    display: inline-block;
+    width: 118px;
+    height: 32px;
+    border: 2px solid $second-color;
+    padding: 5px;
+    text-align: center;
+    line-height: 32px;
+    &:hover {
+        color: $bgc-color;
+        background-color: rgba($second-color, .8);
+    }
+}
+
+.btn-more {
+    font-weight: bold;
+    font-size: 13px;
+    position: absolute;
+    right: 48px;
+    margin-top: 10px;
+}
