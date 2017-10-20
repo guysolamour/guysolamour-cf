@@ -9,7 +9,7 @@ $progress-bar :#2980b9;
     // margin-top: 50px;
     background-color: $skills-color;
     width: 100%;
-    height: rem-convert('rem', 998px);
+    height: rem-convert('rem', 940px);
     &-description {
         color: $bgc-color;
         padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
@@ -76,4 +76,36 @@ $progress-bar :#2980b9;
 
 .seo-bar {
     width: 30%;
+}
+
+.ps-bar {
+    width: 30%;
+}
+
+.bt-bar {
+    width: 50%;
+}
+
+.illus-bar {
+    width: 25%;
+}
+
+.word-bar {
+    width: 80%;
+}
+
+.excel-bar {
+    width: 60%;
+}
+
+.git-bar {
+    width: 35%;
+}
+
+.gulp-bar {
+    width: 80%;
+}
+
+.jq-bar {
+    width: 45%;
 }

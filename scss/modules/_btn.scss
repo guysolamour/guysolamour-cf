@@ -1,30 +1,33 @@
 .btn {
     display: inline-block;
-    width: 118px;
+    width: rem-convert('rem', 118px);
     border: 1px solid $second-color;
-    padding: 5px;
+    padding: rem-convert('rem', 5px);
     text-align: center;
     &:hover {
         color: $bgc-color;
         background-color: rgba($second-color, .8);
-        border-radius: 5px;
+        border-radius: rem-convert('rem', 5px);
+        ;
     }
 }
 
 .btn-more {
     font-weight: bold;
-    height: 32px;
-    line-height: 32px;
-    font-size: 13px;
+    height: rem-convert('rem', 32px);
+    line-height: rem-convert('rem', 32px);
+    font-size: rem-convert('rem', 13px);
     position: absolute;
-    right: 48px;
-    bottom: 10px;
-    margin-top: 10px;
-    margin-bottom: -45px;
+    right: rem-convert('rem', 48px);
+    bottom: rem-convert('rem', 10px);
+    margin-top: rem-convert('rem', 10px);
+    margin-bottom: rem-convert('rem', -45px);
 }
 
 .btn-send {
     font-weight: bold;
-    font-size: 13px;
-    height: 37px;
+    font-size: rem-convert('rem', 13px);
+    ;
+    height: rem-convert('rem', 37px);
+    ;
 }

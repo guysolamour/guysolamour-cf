@@ -2,6 +2,16 @@
    Layout/Main
    ======================= */
 
+@mixin triangle-left($size, $color) {
+    display: inline-block;
+    vertical-align: middle;
+    border-top: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: 10px solid $color;
+    margin-right: 5px;
+}
+
 .section-title {
     position: relative;
 }
@@ -42,6 +52,12 @@
                 color: $second-color;
                 text-decoration: none;
                 transition: color 0.3s;
+            }
+        }
+        &-info {
+            &::before {
+                content: '';
+                @include triangle-left(rem-convert("rem", 7px), $second-color);
             }
         }
     }

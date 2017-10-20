@@ -1,6 +1,6 @@
 .contact {
     // margin-top: 50px;
-    background-color: $skills-color;
+    background-color: #282828;
     width: 100%;
     height: rem-convert('rem', 670px);
     text-align: center;
@@ -14,5 +14,6 @@
         margin: 0 auto;
         padding: 10px;
         margin-bottom: 10px;
+        resize: none;
     }
 }

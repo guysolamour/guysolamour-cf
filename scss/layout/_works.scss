@@ -1,6 +1,11 @@
 .works {
     //width: 300px;
     padding: 0 48px;
+    &-description {
+        padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+        font-weight: normal;
+        text-align: justify;
+    }
 }
 
 .realisation {
