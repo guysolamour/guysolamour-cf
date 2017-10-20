@@ -57,3 +57,32 @@
         font-weight: normal;
     }
 }
+
+
+/**
+ *
+ * TABLET SCREEN 640 * 1023
+ *
+ */
+
+@include screen(rem-convert("rem", 640px),
+rem-convert("rem", 1023px)) {
+    .header-baseline {
+        //padding-top: rem-convert("rem", 220px);
+        //text-align: center;
+        &-l1 {
+            font-size: rem-convert("rem", 33px);
+            ;
+            //font-weight: bold;
+            //strong {
+            //    color: #cd2542;
+            // }
+        }
+        &-l2 {
+            font-size: rem-convert("rem", 33px);
+            ;
+            //font-family: "20th Century Font";
+            //font-weight: normal;
+        }
+    }
+}

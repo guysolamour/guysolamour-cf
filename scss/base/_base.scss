@@ -47,10 +47,10 @@ a {
 
 .dark-section-title {
     color: $bgc-color;
-    padding-top: 20px;
+    padding-top: rem-convert("rem", 20px);
 }
 
 .container {
-    width: 545px;
+    width: rem-convert("rem", 545px);
     margin: 0 auto;
 }
