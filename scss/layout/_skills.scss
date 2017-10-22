@@ -28,6 +28,10 @@ $progress-bar :#2980b9;
     }
 }
 
+.progress-xs-sub {
+    display: none;
+}
+
 .progress {
     background-color: $progress;
     position: relative;
@@ -65,98 +69,98 @@ $progress-bar :#2980b9;
     }
 }
 
+@include screen(rem-convert("rem", 350px), rem-convert("rem", 639px)) {
+    .skills {
+        height: 945px;
+    }
+    .progress-xs-sub {
+        display: block;
+        color: #ffffff;
+        margin-left: 50px;
+        font-weight: 700;
+        font-size: 13px;
+    }
+    .progress {
+        height: 20px;
+        line-height: 20px;
+        &-sub {
+            display: none;
+        }
+        &-bar {
+            left: 0;
+            //width: 100%;
+            background-color: $progress-bar;
+            height: 20px;
+        }
+        &-per {
+            width: 25%;
+            height: 20px;
+        }
+    }
+}
+
 .html-bar {
     @include skill-per(80%);
-    position: absolute;
-    left: 20%;
-    //height: 34px;
 }
 
 .css-bar {
     @include skill-per(65%);
-    position: absolute;
-    left: 20%;
 }
 
 .js-bar {
     @include skill-per(50%);
-    position: absolute;
-    left: 20%;
 }
 
 .php-bar {
     @include skill-per(55%);
-    position: absolute;
-    left: 20%;
 }
 
 .sql-bar {
     @include skill-per(75%);
-    position: absolute;
-    left: 20%;
 }
 
 .wp-bar {
     @include skill-per(40%);
-    position: absolute;
-    left: 20%;
 }
 
 .seo-bar {
     @include skill-per(30%);
-    position: absolute;
-    left: 20%;
 }
 
 .ps-bar {
     @include skill-per(30%);
-    position: absolute;
-    left: 20%;
 }
 
 .bt-bar {
     @include skill-per(50%);
-    position: absolute;
-    left: 20%;
 }
 
 .illus-bar {
     @include skill-per(25%);
-    position: absolute;
-    left: 20%;
 }
 
 .word-bar {
     @include skill-per(80%);
-    position: absolute;
-    left: 20%;
 }
 
 .excel-bar {
     @include skill-per(60%);
-    position: absolute;
-    left: 20%;
 }
 
 .git-bar {
     @include skill-per(35%);
-    position: absolute;
-    left: 20%;
 }
 
 .gulp-bar {
     @include skill-per(80%);
-    position: absolute;
-    left: 20%;
 }
 
 .jq-bar {
     @include skill-per(45%);
-    position: absolute;
-    left: 20%;
 }
 
-@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
+@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px));
+@include min-screen(rem-convert("rem", 1024px)) {
     .skills {
         height: auto;
     }
@@ -184,49 +188,4 @@ $progress-bar :#2980b9;
             text-align: center;
         }
     }
-    // .html-bar {
-    //     width: 80%;
-    // }
-    // .css-bar {
-    //     width: 85%;
-    // }
-    // .js-bar {
-    //     width: 70%;
-    // }
-    // .php-bar {
-    //     width: 75%;
-    // }
-    // .sql-bar {
-    //     width: 95%;
-    // }
-    // .wp-bar {
-    //     width: 60%;
-    // }
-    // .seo-bar {
-    //     width: 50%;
-    // }
-    // .ps-bar {
-    //     width: 50%;
-    // }
-    // .bt-bar {
-    //     width: 70%;
-    // }
-    // .illus-bar {
-    //     width: 45%;
-    // }
-    // .word-bar {
-    //     width: 90%;
-    // }
-    // .excel-bar {
-    //     width: 80%;
-    // }
-    // .git-bar {
-    //     width: 55%;
-    // }
-    // .gulp-bar {
-    //     width: 90%;
-    // }
-    // .jq-bar {
-    //     width: 65%;
-    // }
 }

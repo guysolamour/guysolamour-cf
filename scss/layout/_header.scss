@@ -4,7 +4,7 @@
 
 .l-header {
     position: relative;
-    width: auto;
+    //width: auto;
     //height: rem-convert("rem", 450px);
     height: auto;
     //background-color: rgba(black, 0.5);
@@ -48,19 +48,30 @@
     padding-top: rem-convert("rem", 220px);
     text-align: center;
     color: #ffffff;
+    font-size: rem-convert("rem", 25px);
     &-l1 {
-        font-size: rem-convert("rem", 25px);
-        ;
         font-weight: bold;
         strong {
             color: #cd2542;
         }
     }
     &-l2 {
-        font-size: rem-convert("rem", 25px);
-        ;
         font-family: "20th Century Font";
         font-weight: normal;
+    }
+}
+
+
+/**
+ *
+ * TABLET SCREEN 350 * 639
+ *
+ */
+
+@include screen(rem-convert("rem", 350px),
+rem-convert("rem", 639px)) {
+    .header-baseline {
+        font-size: rem-convert("rem", 20px);
     }
 }
 
@@ -74,22 +85,7 @@
 @include screen(rem-convert("rem", 640px),
 rem-convert("rem", 850px)) {
     .header-baseline {
-        //padding-top: rem-convert("rem", 220px);
-        //text-align: center;
-        &-l1 {
-            font-size: rem-convert("rem", 33px);
-            ;
-            //font-weight: bold;
-            //strong {
-            //    color: #cd2542;
-            // }
-        }
-        &-l2 {
-            font-size: rem-convert("rem", 33px);
-            ;
-            //font-family: "20th Century Font";
-            //font-weight: normal;
-        }
+        font-size: rem-convert("rem", 33px);
     }
 }
 
@@ -120,5 +116,40 @@ rem-convert("rem", 1023px)) {
     }
     .is-active {
         border-bottom: 3px solid #ff4500;
+    }
+    .header-baseline {
+        font-size: rem-convert("rem", 33px);
+    }
+}
+
+@include min-screen(rem-convert("rem", 1024px)) {
+    .down-arrow {
+        bottom: 20px;
+    }
+    .menu nav {
+        display: block;
+    }
+    .menu {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 300;
+        //padding: 5px;
+        img {
+            display: none;
+        }
+        a {
+            display: inline-block;
+            padding: 8px;
+        }
+    }
+    .is-active {
+        border-bottom: 3px solid #ff4500;
+    }
+    .header-baseline {
+        padding-top: 300px;
+        font-size: rem-convert("rem", 55px);
+    }
+    .l-header--bg {
+        height: 700px;
     }
 }

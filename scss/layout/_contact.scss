@@ -47,3 +47,18 @@
         height: 522px;
     }
 }
+
+@include min-screen(rem-convert("rem", 1024px)) {
+    .contact input[type="text"],
+    .contact input[type="tel"],
+    .contact input[type="email"] {
+        display: inline-block;
+        width: 400px;
+    }
+    .contact textarea {
+        width: 830px;
+    }
+    .contact {
+        height: 575px;
+    }
+}

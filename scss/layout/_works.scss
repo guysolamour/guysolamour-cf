@@ -1,5 +1,4 @@
 .works {
-    //width: 300px;
     padding: 0 48px;
     &-description {
         padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
@@ -15,26 +14,85 @@
     }
 }
 
-@include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
+.l-container {
+    width: 100%;
+    margin: 0 auto;
+    //background-color: rgba(red, .3);
+}
+
+@include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {
     .realisation {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        img {
+            display: inline-block;
+            width: 90%;
+        }
+    }
+}
+
+@include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
+    .l-container {
+        width: 600px;
+        margin: 0 auto;
+        //background-color: rgba(lime, .3);
+    }
+    .realisation {
         img {
             display: block;
             width: 46%;
         }
     }
+    .works-line-1,
+    .works-line-2 {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 @include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
+    .l-container {
+        width: 800px;
+        margin: 0 auto;
+        background-color: rgba(aqua, .3);
+    }
     .realisation {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
         img {
             display: block;
-            width: 30%;
+            width: 22.5%;
         }
     }
+    .works-line-1,
+    .works-line-2 {
+        display: flex;
+    }
 }
+
+@include min-screen(rem-convert("rem", 1024px)) {
+    .l-container {
+        width: 955px;
+        margin: 0 auto;
+    }
+    .realisation {
+        img {
+            display: block;
+            max-width: 22.5%;
+            // max-width: 250px;
+        }
+    }
+    .works-line-1,
+    .works-line-2 {
+        display: flex;
+    }
+}
+
+// @include min-screen(rem-convert("rem", 1300px)) {
+//     .realisation {
+//         img {
+//             display: block;
+//             max-width: 275px;
+//         }
+//     }
+//     .works-line-1,
+//     .works-line-2 {
+//         display: flex;
+//     }
+// }
