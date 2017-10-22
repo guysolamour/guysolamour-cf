@@ -6,7 +6,7 @@
     text-align: center;
     &:hover {
         color: $bgc-color;
-        background-color: rgba($second-color, .8);
+        background-color: rgba(#f39c12, 1);
         border-radius: rem-convert('rem', 5px);
         ;
     }
@@ -19,7 +19,7 @@
     font-size: rem-convert('rem', 13px);
     position: absolute;
     right: rem-convert('rem', 48px);
-    bottom: rem-convert('rem', 10px);
+    bottom: rem-convert('rem', 17px);
     margin-top: rem-convert('rem', 10px);
     margin-bottom: rem-convert('rem', -45px);
 }
@@ -30,4 +30,17 @@
     ;
     height: rem-convert('rem', 37px);
     ;
+}
+
+@include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
+    .btn-more {
+        right: 0;
+        left: -180px;
+        // top: 0;
+        bottom: 65px;
+    }
+    .btn-send {
+        position: absolute;
+        right: 6.5%;
+    }
 }

@@ -14,3 +14,15 @@
         padding: 10px;
     }
 }
+
+@include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
+    .realisation {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        img {
+            display: block;
+            width: 46%;
+        }
+    }
+}

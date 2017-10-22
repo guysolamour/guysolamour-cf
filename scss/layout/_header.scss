@@ -35,13 +35,14 @@
 .l-header--bg {
     background: url("../img/header.jpg") center top fixed;
     background-size: cover;
-    width: 100%;
-    height: rem-convert("rem", 400px);
+    max-width: 100%;
+    height: rem-convert("rem", 430px);
 }
 
 .header-baseline {
     padding-top: rem-convert("rem", 220px);
     text-align: center;
+    color: #ffffff;
     &-l1 {
         font-size: rem-convert("rem", 25px);
         ;
@@ -66,7 +67,7 @@
  */
 
 @include screen(rem-convert("rem", 640px),
-rem-convert("rem", 1023px)) {
+rem-convert("rem", 850px)) {
     .header-baseline {
         //padding-top: rem-convert("rem", 220px);
         //text-align: center;

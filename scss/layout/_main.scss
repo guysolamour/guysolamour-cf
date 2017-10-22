@@ -33,9 +33,11 @@
 .description {
     margin-bottom: 20px;
     position: relative;
+    height: 320px;
     .surname {
         text-align: center;
         font-weight: bolder;
+        margin-top: 0;
     }
     p {
         padding-left: rem-convert("rem", 48px);
@@ -43,8 +45,9 @@
         text-align: justify;
     }
     .detail {
-        padding: 0 rem-convert("rem", 48px) rem-convert("rem", 23px) rem-convert("rem", 48px);
+        //padding: 0 rem-convert("rem", 48px) rem-convert("rem", 23px) rem-convert("rem", 48px);
         font-weight: bold;
+        line-height: .9;
         strong {
             color: #cd2542;
             text-decoration: underline;
@@ -66,4 +69,31 @@
 .surname {
     font-size: 30px;
     margin-bottom: 0;
+}
+
+@include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
+    .section-title {
+        font-size: 33px;
+    }
+    .presentation {
+        display: flex;
+        justify-content: space-between;
+    }
+    .portrait img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        flex-basis: 40%;
+    }
+    .description {
+        flex-basis: 55%;
+        height: 380px;
+        p {
+            //padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    .description .surname {
+        text-align: left;
+    }
 }

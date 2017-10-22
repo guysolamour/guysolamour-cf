@@ -11,8 +11,8 @@
   <body>
     <header class="l-header">
       <div class="l-header--top">
-        <div class="logo"><img src="img/logo.png" alt="guysolamour logo"></div>
-        <div class="menu"><img src="../img/icons/menu.png" alt=""></div>
+        <div class="logo"><a href="#"><img src="img/logo.png" alt="guysolamour logo"></a></div>
+        <div class="menu"><img src="../img/icons/menu.png" alt="" style="cursor:pointer"></div>
       </div>
       <div class="l-header--bg">
         <div class="header-baseline">
@@ -27,19 +27,21 @@
         <!--img(src="../img/icons/is-active.png", alt="", class="section-title-bare")-->
         <div class="section-title-bare"></div>
       </h2>
-      <div class="portrait"><img src="../img/portrait.png" alt="Photo de Guysolamour"></div>
-      <div class="description">
-        <h3 class="surname">Guysolamour</h3>
-        <p>
-          Passionné d’informatique et de nouvelles technologies,
-          Je suis depuis de nombreuses années autodidacte dans le domaine de la programmation et en particulier du développement web.
-          J'aime expérimenter, découvrir et apprendre au fur et à mesure de mes projets pros et perso..
-        </p>
-        <div class="detail">
-          <p class="detail-info">Nom: Guy-roland ASSALE <br></p>
-          <p class="detail-info">Email: <strong>rolandassale@yandex.com</strong> <br></p>
-          <p class="detail-info">Téléphone: +225 48 393 773 / 03 847 228</p>
-        </div><a href="#" class="btn  btn-more">En savoir plus</a>
+      <div class="presentation">
+        <div class="portrait"><img src="../img/portrait.png" alt="Photo de Guysolamour"></div>
+        <div class="description">
+          <h3 class="surname">Guysolamour</h3>
+          <p>
+            Passionné d’informatique et de nouvelles technologies,
+            Je suis depuis de nombreuses années autodidacte dans le domaine de la programmation et en particulier du développement web.
+            J'aime expérimenter, découvrir et apprendre au fur et à mesure de mes projets pros et perso..
+          </p>
+          <div class="detail">
+            <p class="detail-info">Nom: Guy-roland ASSALE <br></p>
+            <p class="detail-info">Email: <strong>rolandassale@yandex.com</strong> <br></p>
+            <p class="detail-info">Téléphone: +225 48 393 773 / 03 847 228</p>
+          </div><a href="#" class="btn  btn-more">En savoir plus</a>
+        </div>
       </div>
     </div>
     <div class="skills">
@@ -51,79 +53,99 @@
         Les valeurs en pourcentages sont très subjectives. Les compétences dont les valeurs sont supérieures à 50%
         sont celles que je maîtrise le mieux et dont je fais usage le plus régulièrement.
       </p>
-      <div class="progress">
-        <div class="progress-bar html-bar"></div>
-        <div class="progress-sub">HTML</div>
-        <div class="progress-per">80%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar css-bar"></div>
-        <div class="progress-sub">CSS</div>
-        <div class="progress-per">65%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar js-bar"></div>
-        <div class="progress-sub">JavaScript</div>
-        <div class="progress-per">50%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar php-bar"></div>
-        <div class="progress-sub">PHP</div>
-        <div class="progress-per">55%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar sql-bar"></div>
-        <div class="progress-sub">MySql</div>
-        <div class="progress-per">75%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar wp-bar"></div>
-        <div class="progress-sub">Wordpress</div>
-        <div class="progress-per">40%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar ps-bar"></div>
-        <div class="progress-sub">Photoshop</div>
-        <div class="progress-per">40%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar illus-bar"></div>
-        <div class="progress-sub">Illustrator</div>
-        <div class="progress-per">25%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar word-bar"></div>
-        <div class="progress-sub">Word</div>
-        <div class="progress-per">80%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar excel-bar"></div>
-        <div class="progress-sub">Excel</div>
-        <div class="progress-per">60%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar jq-bar"></div>
-        <div class="progress-sub">jQuery</div>
-        <div class="progress-per">45%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar git-bar"></div>
-        <div class="progress-sub">GIT</div>
-        <div class="progress-per">30%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar bt-bar"></div>
-        <div class="progress-sub">Bootstrap</div>
-        <div class="progress-per">50%</div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar gulp-bar"></div>
-        <div class="progress-sub">Gulp</div>
-        <div class="progress-per">80%</div>
+      <div class="skills-progress"> 
+        <div class="skills-left">   
+          <div class="progress">
+            <div class="progress-sub">HTML</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar html-bar"></div>
+            <div class="progress-per">80%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">CSS</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar css-bar"></div>
+            <div class="progress-per">65%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">JavaScript</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar js-bar"></div>
+            <div class="progress-per">50%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">PHP</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar php-bar"></div>
+            <div class="progress-per">55%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">MySql</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar sql-bar"></div>
+            <div class="progress-per">75%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">Wordpress</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar wp-bar"></div>
+            <div class="progress-per">40%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">Photoshop</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar ps-bar"></div>
+            <div class="progress-per">40%</div>
+          </div>
+        </div>
+        <div class="skills-right">
+          <div class="progress">
+            <div class="progress-sub">Illustrator</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar illus-bar"></div>
+            <div class="progress-per">25%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">Word</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar word-bar"></div>
+            <div class="progress-per">80%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">Excel</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar excel-bar"></div>
+            <div class="progress-per">60%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">jQuery</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar jq-bar"></div>
+            <div class="progress-per">45%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">GIT</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar git-bar"></div>
+            <div class="progress-per">30%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">Bootstrap</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar bt-bar"></div>
+            <div class="progress-per">50%</div>
+          </div>
+          <div class="progress">
+            <div class="progress-sub">Gulp</div>
+            <div class="progress-bar-white"></div>
+            <div class="progress-bar gulp-bar"></div>
+            <div class="progress-per">80%</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="works">
-      <h2 class="section-title">Mes compétences
+      <h2 class="section-title">Mes réalisations
         <div class="section-title-bare"></div>
       </h2>
       <p class="works-description"> Une sélection de quelques créations réalisées en milieu professionnel</p>
