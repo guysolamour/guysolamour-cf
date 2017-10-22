@@ -156,28 +156,34 @@ $progress-bar :#2980b9;
     left: 20%;
 }
 
-@include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
-    // .skills-progress {
-    //     //display: flex;
-    //     .skills-left {
-    //         // flex-basis: 50%;
-    //         // margin-right: 10px;
-    //         // .progress {
-    //         //     margin-right: 0;
-    //         // }
-    //     }
-    //     .skills-right {
-    //         // flex-basis: 50%;
-    //         // .progress {
-    //         //     margin-left: 0;
-    //         // }
-    //     }
-    // }
-    // .progress {
-    //     &-sub {
-    //         width: 32%;
-    //     }
-    // }
+@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
+    .skills {
+        height: auto;
+    }
+    .skills-progress {
+        display: flex;
+        justify-content: space-between;
+        .skills-left {
+            flex-basis: 49%;
+            margin-right: 10px;
+            .progress {
+                margin-right: 0;
+            }
+        }
+        .skills-right {
+            flex-basis: 49%;
+            .progress {
+                margin-left: 0;
+            }
+        }
+    }
+    .progress {
+        &-sub {
+            width: 20%;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
     // .html-bar {
     //     width: 80%;
     // }

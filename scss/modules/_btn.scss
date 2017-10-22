@@ -44,3 +44,16 @@
         right: 6.5%;
     }
 }
+
+@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
+    // .btn-more {
+    //     right: 0;
+    //     left: -180px;
+    //     // top: 0;
+    //     bottom: 65px;
+    // }
+    .btn-send {
+        position: absolute;
+        right: 5%;
+    }
+}

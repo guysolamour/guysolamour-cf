@@ -26,3 +26,15 @@
         }
     }
 }
+
+@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
+    .realisation {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        img {
+            display: block;
+            width: 30%;
+        }
+    }
+}

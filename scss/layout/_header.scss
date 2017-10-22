@@ -4,8 +4,9 @@
 
 .l-header {
     position: relative;
-    width: 100%;
-    height: rem-convert("rem", 450px);
+    width: auto;
+    //height: rem-convert("rem", 450px);
+    height: auto;
     //background-color: rgba(black, 0.5);
 }
 
@@ -30,6 +31,10 @@
     .menu {
         padding-right: rem-convert("rem", 16px);
     }
+}
+
+.menu nav {
+    display: none;
 }
 
 .l-header--bg {
@@ -62,7 +67,7 @@
 
 /**
  *
- * TABLET SCREEN 640 * 1023
+ * TABLET SCREEN 640 * 850
  *
  */
 
@@ -85,5 +90,35 @@ rem-convert("rem", 850px)) {
             //font-family: "20th Century Font";
             //font-weight: normal;
         }
+    }
+}
+
+
+/**
+ *
+ * DESKTOP SCREEN 851 * 1023
+ *
+ */
+
+@include screen(rem-convert("rem", 851px),
+rem-convert("rem", 1023px)) {
+    .menu nav {
+        display: block;
+    }
+    .menu {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 300;
+        //padding: 5px;
+        img {
+            display: none;
+        }
+        a {
+            display: inline-block;
+            padding: 8px;
+        }
+    }
+    .is-active {
+        border-bottom: 3px solid #ff4500;
     }
 }

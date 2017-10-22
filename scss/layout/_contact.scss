@@ -32,3 +32,18 @@
         width: 83.5%;
     }
 }
+
+@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
+    .contact input[type="text"],
+    .contact input[type="tel"],
+    .contact input[type="email"] {
+        display: inline-block;
+        width: 27%;
+    }
+    .contact textarea {
+        width: 87.5%;
+    }
+    .contact {
+        height: 522px;
+    }
+}
