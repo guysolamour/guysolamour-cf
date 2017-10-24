@@ -10,6 +10,13 @@
     //background-color: rgba(black, 0.5);
 }
 
+.fixed {
+    position: fixed;
+    top: 0;
+    // width: 100%;
+    z-index: 100;
+}
+
 .down-arrow {
     position: absolute;
     left: 50%;
@@ -25,6 +32,10 @@
     justify-content: space-between;
     align-items: center;
     height: 66px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
     .logo {
         padding-left: rem-convert("rem", 16px);
     }
