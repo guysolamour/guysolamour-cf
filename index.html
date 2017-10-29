@@ -9,11 +9,11 @@
     <!-- endbuild-->
   </head>
   <body>
-    <header class="l-header">
+    <header id="header" class="l-header">
       <div data-sticky class="l-header--top">
         <div class="logo"><a href="#"><img src="img/logo.png" alt="guysolamour logo"></a></div>
         <nav class="menu">
-          <nav><a href="#">Acceuil</a><a href="#">A propos</a><a href="#" class="is-active">Compétences</a><a href="#">Réalisations</a><a href="#">Contact</a></nav><img src="../img/icons/menu.png" alt="" style="cursor:pointer">
+          <nav><a href="#home">Acceuil</a><a href="#about">A propos</a><a href="#skills" class="is-active">Compétences</a><a href="#works">Réalisations</a><a href="#contact">Contact</a></nav><img src="../img/icons/menu.png" alt="" style="cursor:pointer">
         </nav>
       </div>
       <div class="l-header--bg">
@@ -25,7 +25,7 @@
       <div class="down-arrow"><img src="../img/icons/down-arrow.png" alt=""></div>
     </header>
     <div class="l-container">
-      <div class="about">
+      <section id="about" class="about">
         <h2 class="section-title">A propos
           <!--img(src="../img/icons/is-active.png", alt="", class="section-title-bare")-->
           <div class="section-title-bare"></div>
@@ -46,9 +46,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-    <div class="skills">
+    <section id="skills" class="skills">
       <div class="l-container">
         <h2 class="section-title dark-section-title">Mes compétences
           <div class="section-title-bare"></div>
@@ -163,8 +163,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="works">
+    </section>
+    <section id="works" class="works">
       <div class="l-container">
         <h2 class="section-title">Mes réalisations
           <div class="section-title-bare"></div>
@@ -175,28 +175,38 @@
           <div class="works-line-2"><img src="../img/work1.jpg" alt=""><img src="../img/work2.jpg" alt=""><img src="../img/work2.jpg" alt=""></div>
         </div>
       </div>
-    </div>
-    <div class="contact">
+    </section>
+    <section id="contact" class="contact">
       <div class="l-container">
         <h2 class="section-title dark-section-title">Contact
           <div class="section-title-bare"></div>
         </h2>
         <p class="contact-des">Une question, une suggestion? contactez nous!</p>
-        <form>
-          <input type="text" name="name" placeholder="Name:" required="required">
-          <input type="tel" name="tel" placeholder="Téléphone:" required="required">
-          <input type="email" name="email" placeholder="Email:" required="required">
-          <textarea name="msg" cols="30" rows="10" placeholder="Votre message...:" required="required"></textarea>
+        <form id="contact-form">
+          <div class="input-text">
+            <input type="text" name="name" id="name" placeholder="Name:"><span class="inpu-error"></span>
+          </div>
+          <div class="input-num">
+            <input type="number" name="tel" id="tel" placeholder="Téléphone:"><span class="inpu-error"></span>
+          </div>
+          <div class="input-email">
+            <input type="email" name="email" id="email" placeholder="Email:"><span class="inpu-error"></span>
+          </div>
+          <div class="input-msg"> 
+            <textarea name="msg" cols="30" , id="msg" rows="10" placeholder="Votre message...:"></textarea><span class="inpu-error"></span>
+          </div>
           <button type="submit" class="btn  btn-send">Envoyer</button>
         </form>
       </div>
-    </div>
-    <div class="footer">
+    </section>
+    <footer id="footer" class="footer">
       <div class="l-container"><a href="#"><i class="fa fa-facebook-official fa-3x fb"></i></a><a href="#"><i class="fa fa-twitter fa-3x fb"></i></a><a href="#"><i class="fa fa-instagram fa-3x fb"></i></a><a href="#"><i class="fa fa-youtube fa-3x fb"></i></a><a href="#">
           <p class="copyright">  &copy Guysolamour  - 2017 All rights reserved</p></a></div>
-    </div>
+    </footer>
     <!--h1 Hello World-->
     <!-- build:js ./js/main.min.js-->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/scroll2top.js"></script>
     <script src="js/app.js"></script>
     <!-- endbuild-->
   </body>
