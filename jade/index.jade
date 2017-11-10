@@ -8,12 +8,17 @@ html
 		link(rel="shortcut icon", type="image/x-icon", href="favicon.ico")
 		// endbuild
 	body
-		include ./_header.jade
-		include ./_about.jade
-		include ./_skills.jade
-		include ./_works.jade
-		include ./_contact.jade
-		include ./_footer.jade
+		.site-container
+			.site-pusher
+				include ./_header.jade
+				.site-content
+					.r-container
+						include ./_about.jade
+						include ./_skills.jade
+						include ./_works.jade
+						include ./_contact.jade
+						include ./_footer.jade
+		div(class="site-cache",id="site-cache")
 		//h1 Hello World
 		// build:js ./js/main.min.js
 		script(src="js/vendor/jquery.js")

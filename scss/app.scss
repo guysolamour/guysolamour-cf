@@ -37,6 +37,7 @@
 @import "layout/skills";
 @import "layout/works";
 @import "layout/contact";
+@import "layout/burger";
 @import "modules/btn";
 @import "modules/form";
 @import "layout/scroll2top";
@@ -56,3 +57,7 @@
 /* States */
 
 //@import "states/print";
+body {
+    background-color: red;
+    height: 100%;
+}
