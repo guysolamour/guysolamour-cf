@@ -1,23 +1,16 @@
-header.l-header#header
-    div(class="l-header--top",data-sticky)
+div   
+    header.l-header#header
+        .header__icon#header__icon
         .logo
             a(href="#"): img(src="img/logo.png", alt="guysolamour logo")
-        img#header--icon(src="../img/icons/menu.png", alt="", style={cursor: 'pointer'})
-        nav(class="menu")
-            nav
-                a(href="#home") Acceuil
-                a(href="#about") A propos
-                a(href="#skills", class="is-active") Compétences
-                a(href="#works") Réalisations
-                a(href="#contact") Contact
             
-            
-    div(class="l-header--bg")
-        .header-baseline
-            .header-baseline-l1 Salut, moi c'est #[strong Guy-roland ASSALE]
-            .header-baseline-l2 développeur et intégrateur web
-
-    div(class="down-arrow")
-        img(src="../img/icons/down-arrow.png", alt="")
+        nav.menu
+            a(href="#home") Acceuil
+            a(href="#about") A propos
+            a(href="#skills", class="is-active") Compétences
+            a(href="#works") Réalisations
+            a(href="#contact") Contact     
+        
+    
 
     

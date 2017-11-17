@@ -10,8 +10,11 @@
     border-bottom: $size solid transparent;
     border-left: 10px solid $color;
     margin-right: 5px;
+    margin-left: 5px;
 }
-
+.about {
+  height: 725px;
+}
 .section-title {
     position: relative;
 }
@@ -40,12 +43,13 @@
         margin-top: 0;
     }
     p {
-        padding-left: rem-convert("rem", 48px);
-        padding-right: rem-convert("rem", 48px);
+        //padding-left: rem-convert("rem", 48px);
+        //padding-right: rem-convert("rem", 48px);
         text-align: justify;
     }
     .detail {
         //padding: 0 rem-convert("rem", 48px) rem-convert("rem", 23px) rem-convert("rem", 48px);
+        text-align: center;
         font-weight: bold;
         line-height: .9;
         strong {
@@ -71,85 +75,85 @@
     margin-bottom: 0;
 }
 
-@include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {
-    body {
-        font-size: 13px;
-    }
-    .about {
-        height: auto;
-    }
-    .description {
-        .detail-info::before {
-            content: none;
-        }
-    }
-    .section-title {
-        font-size: 25px;
-    }
-    .surname {
-        font-size: 22px;
-    }
-}
+// @include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {
+//     body {
+//         font-size: 13px;
+//     }
+//     .about {
+//         height: auto;
+//     }
+//     .description {
+//         .detail-info::before {
+//             content: none;
+//         }
+//     }
+//     .section-title {
+//         font-size: 25px;
+//     }
+//     .surname {
+//         font-size: 22px;
+//     }
+// }
 
-@include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
-    .section-title {
-        font-size: 33px;
-    }
-    .presentation {
-        display: flex;
-        justify-content: space-between;
-    }
-    .portrait img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        flex-basis: 40%;
-    }
-    .description {
-        flex-basis: 55%;
-        height: 380px;
-        p {
-            //padding-right: 0;
-            padding-left: 0;
-        }
-    }
-    .description .surname {
-        text-align: left;
-    }
-}
+// @include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
+//     .section-title {
+//         font-size: 33px;
+//     }
+//     .presentation {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+//     .portrait img {
+//         max-width: 100%;
+//         height: auto;
+//         display: block;
+//         flex-basis: 40%;
+//     }
+//     .description {
+//         flex-basis: 55%;
+//         height: 380px;
+//         p {
+//             //padding-right: 0;
+//             padding-left: 0;
+//         }
+//     }
+//     .description .surname {
+//         text-align: left;
+//     }
+// }
 
-@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
-    .section-title {
-        font-size: 33px;
-    }
-    .portrait {
-        margin-top: 0;
-    }
-    .presentation {
-        display: flex;
-        justify-content: space-between;
-    }
-    .description .surname {
-        padding-left: 45px;
-        text-align: left;
-        font-size: 27px;
-    }
-}
+// @include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
+//     .section-title {
+//         font-size: 33px;
+//     }
+//     .portrait {
+//         margin-top: 0;
+//     }
+//     .presentation {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+//     .description .surname {
+//         padding-left: 45px;
+//         text-align: left;
+//         font-size: 27px;
+//     }
+// }
 
-@include min-screen(rem-convert("rem", 1024px)) {
-    .section-title {
-        font-size: 33px;
-    }
-    .portrait {
-        margin-top: 0;
-    }
-    .presentation {
-        display: flex;
-        justify-content: space-between;
-    }
-    .description .surname {
-        padding-left: 45px;
-        text-align: left;
-        font-size: 27px;
-    }
-}
+// @include min-screen(rem-convert("rem", 1024px)) {
+//     .section-title {
+//         font-size: 33px;
+//     }
+//     .portrait {
+//         margin-top: 0;
+//     }
+//     .presentation {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+//     .description .surname {
+//         padding-left: 45px;
+//         text-align: left;
+//         font-size: 27px;
+//     }
+// }

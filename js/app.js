@@ -50,16 +50,35 @@
 //     }
 // })();
 $(document).ready(function () {
-    $('#header--icon').on('click', function (e) {
+    $('#header__icon').on('click', function (e) {
         e.preventDefault();
         $('body').toggleClass('with--sidebar');
     });
 
-    $('#site-cache').on('click', function () {
+    $('#site-cache,.menu a').on('click', function () {
         $('body').removeClass('with--sidebar');
     });
+
+    // $('.menu a').on('click', function(){
+    //   $('body').removeClass('with--sidebar')
+    // })
+
+    //	Add return on top button
 });
-$('body').css('backgoundColor', 'red');
+$(document).ready(function () {
+    $('body').append('<div id="returnOnTop" title="Retour en haut">&nbsp;</div>');
+
+    //	On button click, let's scroll up to top
+    $('#returnOnTop').click(function () {
+        $('.site-content').animate({ scrollTop: 0 }, 'slow');
+    });
+
+    $('.site-content').scroll(function () {
+        //	If on top fade the bouton out, else fade it in
+        if ($(this).scrollTop() <= 1000) $('#returnOnTop').fadeOut();else $('#returnOnTop').fadeIn();
+    });
+});
+
 var form = document.getElementById('contact-form');
 
 var inputs = form.querySelectorAll('input,textarea');
@@ -69,31 +88,31 @@ var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
 form.addEventListener('submit', function (ev) {
     if (this.name.value.length === 0) {
         ev.preventDefault();
-        this.name.nextElementSibling.innerHTML = '';
+        //this.name.nextElementSibling.innerHTML = ''
         this.name.classList.add('shake');
-        this.name.nextElementSibling.innerHTML = 'Veuillez remplir ce champ';
+        //this.name.nextElementSibling.innerHTML = 'Veuillez remplir ce champ'
         this.name.style.backgroundColor = 'pink';
     }
     if (!regex.test(this.email.value)) {
         ev.preventDefault();
-        this.email.nextElementSibling.innerHTML = '';
+        //this.email.nextElementSibling.innerHTML = ''
         this.email.classList.add('shake');
-        this.email.nextElementSibling.innerHTML = 'Veuillez saisir une adresse valide';
+        //  this.email.nextElementSibling.innerHTML = 'Veuillez saisir une adresse valide'
         this.email.style.backgroundColor = 'pink';
     }
 
     if (this.tel.value.length < 2) {
         ev.preventDefault();
-        this.tel.nextElementSibling.innerHTML = '';
+        //this.tel.nextElementSibling.innerHTML = ''
         this.tel.classList.add('shake');
-        this.tel.nextElementSibling.innerHTML = 'Veuillez remplir ce champ';
+        //this.tel.nextElementSibling.innerHTML = 'Veuillez remplir ce champ'
         this.tel.style.backgroundColor = 'pink';
     }
     if (this.msg.value.length < 2) {
         ev.preventDefault();
         this.msg.classList.add('shake');
-        this.msg.nextElementSibling.innerHTML = '';
-        this.msg.nextElementSibling.innerHTML = 'Veuillez remplir ce champ';
+        //this.msg.nextElementSibling.innerHTML = ''
+        //this.msg.nextElementSibling.innerHTML = 'Veuillez remplir ce champ'
         this.msg.style.backgroundColor = 'pink';
     }
 });
@@ -104,8 +123,8 @@ inputs.forEach(function (input) {
         var next = this.nextElementSibling;
         this.style.backgroundColor = 'white';
         if (this.value.length < 2) {
-            next.innerHTML = '';
-            next.innerHTML = 'Veuillez remplir ce champ';
+            //next.innerHTML = ''
+            //next.innerHTML = 'Veuillez remplir ce champ'
 
             this.style.backgroundColor = 'pink';
         }
@@ -115,10 +134,10 @@ inputs.forEach(function (input) {
 
         var next = this.nextElementSibling;
         if (this.value.length > 1) {
-            next.innerHTML = '';
-            this.style.backgroundColor = 'white';
+            //next.innerHTML = ''
+            this.style.backgroundColor = '#fff';
         } else {
-            next.innerHTML = '';
+            //next.innerHTML = ''
             this.style.backgroundColor = '';
         }
     });

@@ -2,7 +2,7 @@
     // margin-top: 50px;
     background-color: #282828;
     width: 100%;
-    height: rem-convert('rem', 700px);
+    height: rem-convert('rem', 576px);
     text-align: center;
     position: relative;
     &-des {
@@ -11,7 +11,7 @@
     input,
     textarea {
         display: block;
-        width: 70%;
+        width: 90%;
         margin: 0 auto;
         padding: 10px;
         margin-bottom: 10px;

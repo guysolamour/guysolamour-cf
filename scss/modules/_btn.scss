@@ -1,26 +1,122 @@
+$bg-color: #F1E9DA;
+$link-text-color: #fff;
+$button-bg-1: #541388;
+$button-bg-2: #D90368;
+$button-bg-3: #104547;
+$button-bg-4: #4F000B;
+$button-bg-5: #F28123;
+$border-radius: 6px;
+$overlay-color: #fff;
+
+
+
+
 .btn {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: $link-text-color;
+  text-transform: capitalize;
+  /* background-color: - add your own background-color */
+      background-color: #f28123;
+  font: {
+    family: 'Roboto', sans-serif; /* put your font-family */
+    size: 13px;
+  }
+  padding: 16px 0px;
+  width: 135px;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+.btn-more {
+  transition: all 0.2s linear 0s;
+
+  &:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+  }
+
+  &:hover {
+    text-indent: -20px;
+
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+}
+.btn-send {
+  //f003
+  transition: all 0.2s linear 0s;
+  //background-color: #104547;
+
+  &:before {
+    content: "\f003";
+    font-family: FontAwesome;
+    font-size: 17px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+  }
+
+  &:hover {
+    text-indent: -20px;
+
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+}
+
+
+
+
+
+
+/*.btn {
     display: inline-block;
     width: rem-convert('rem', 118px);
     border: 1px solid $second-color;
     padding: rem-convert('rem', 5px);
     text-align: center;
     &:hover {
-        color: $bgc-color;
-        background-color: rgba(#f39c12, 1);
+        //color: $bgc-color;
+        background-color: rgba(#0f0, .2);
         border-radius: rem-convert('rem', 5px);
         ;
     }
 }
 
 .btn-more {
+    //display: inline-block;
     font-weight: bold;
     height: rem-convert('rem', 32px);
     line-height: rem-convert('rem', 32px);
     font-size: rem-convert('rem', 13px);
-    position: absolute;
-    right: rem-convert('rem', 48px);
-    bottom: rem-convert('rem', 17px);
-    margin-top: rem-convert('rem', 10px);
+    //position: absolute;
+    //right: rem-convert('rem', 48px);
+    //bottom: rem-convert('rem', 17px);
+    //margin-top: rem-convert('rem', 10px);
     margin-bottom: rem-convert('rem', -45px);
 }
 
@@ -30,36 +126,36 @@
     ;
     height: rem-convert('rem', 37px);
     ;
-}
+}*/
 
-@include screen(rem-convert("rem", 350px), rem-convert("rem", 639px)) {
-    .btn-more {
-        bottom: -25px;
-        //right: 10px;
-        font-size: 12px;
-        // margin: 5px;
-        height: 28px;
-    }
-    .btn-send {
-        position: absolute;
-        right: 13%;
-    }
-    .description .detail {
-        position: relative;
-    }
-}
+// @include screen(rem-convert("rem", 350px), rem-convert("rem", 639px)) {
+//     .btn-more {
+//         bottom: -25px;
+//         //right: 10px;
+//         font-size: 12px;
+//         // margin: 5px;
+//         height: 28px;
+//     }
+//     .btn-send {
+//         position: absolute;
+//         right: 13%;
+//     }
+//     .description .detail {
+//         position: relative;
+//     }
+// }
 
-@include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
-    .btn-more {
-        right: 0;
-        left: -180px;
-        bottom: 65px;
-    }
-    // .btn-send {
-    //     position: absolute;
-    //     right: 16.5%;
-    // }
-}
+// @include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
+//     .btn-more {
+//         right: 0;
+//         left: -180px;
+//         bottom: 65px;
+//     }
+//     // .btn-send {
+//     //     position: absolute;
+//     //     right: 16.5%;
+//     // }
+// }
 
 // @include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
 //     .btn-send {

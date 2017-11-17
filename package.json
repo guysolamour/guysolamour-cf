@@ -12,7 +12,6 @@
     "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",
     "browser-sync": "^2.18.13",
-    "browsersync": "^2.11.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.0",
@@ -42,6 +41,7 @@
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-preprocess": "^2.0.0",
+    "gulp-pug": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-size": "^2.1.0",
@@ -59,8 +59,5 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.9.0",
     "webpack": "^3.6.0"
-  },
-  "dependencies": {
-    "browser-sync": "^2.18.13"
   }
 }

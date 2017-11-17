@@ -31,13 +31,13 @@
 
 /* Layouts */
 
-@import "layout/constrained";
+//@import "layout/constrained";
 @import "layout/header";
 @import "layout/main";
 @import "layout/skills";
 @import "layout/works";
 @import "layout/contact";
-@import "layout/burger";
+// @import "layout/burger";
 @import "modules/btn";
 @import "modules/form";
 @import "layout/scroll2top";
@@ -45,7 +45,7 @@
 
 /* Modules */
 
-@import "modules/box";
+//@import "modules/box";
 // @include screen(40em, 63.9375em) {}
 //@include screen(40em, 63.9375em) {}
 // @include screen(51rem, 63.9375rem) {
@@ -57,7 +57,3 @@
 /* States */
 
 //@import "states/print";
-body {
-    background-color: red;
-    height: 100%;
-}
