@@ -173,6 +173,20 @@ rem-convert("rem", 480px)){
     }
   }
 }
+@include screen(rem-convert("rem", 480px),
+rem-convert("rem", 576px)){
+  .progress {
+    margin: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+  margin-bottom: 10px;
+  }
+  .skills {
+    &-description {
+      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+
+    }
+  }
+}
+
 
 /*@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px));
 @include min-screen(rem-convert("rem", 1024px)) {

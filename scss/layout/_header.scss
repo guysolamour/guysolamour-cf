@@ -170,7 +170,24 @@ rem-convert("rem", 480px)) {
     margin-top: 65px;
   }
 
-
+}
+@include screen(rem-convert("rem", 480px),
+rem-convert("rem", 576px)){
+  $menu-width: 200px;
+  .menu{
+    width: $menu-width;
+  }
+  .with--sidebar {
+      .site-pusher {
+          transform: translateX($menu-width);
+      }
+  }
+  .header-baseline {
+    line-height: 2;
+  }
+  .down-arrow{
+    margin-top: 50px;
+  }
 }
 // /**
 //  *

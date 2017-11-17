@@ -26,6 +26,14 @@ rem-convert("rem", 480px)){
     }
 }
 }
+@include screen(rem-convert("rem", 480px),
+rem-convert("rem", 576px)) {
+  .contact {
+    input, textarea {
+      width: 70%;
+    }
+}
+}
 // VALIDATE CONATCT
 // input:required {
 //     border: 1px solid red;
