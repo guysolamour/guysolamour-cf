@@ -45,6 +45,7 @@
     p {
         //padding-left: rem-convert("rem", 48px);
         //padding-right: rem-convert("rem", 48px);
+        padding: 0 0 0 1px;
         text-align: justify;
     }
     .detail {
@@ -74,7 +75,15 @@
     font-size: 30px;
     margin-bottom: 0;
 }
-
+@include screen(rem-convert("rem", 320px),
+rem-convert("rem", 480px)){
+  .description {
+    p{
+      padding-left: rem-convert("rem", 48px);
+      padding-right: rem-convert("rem", 48px);
+    }
+  }
+}
 // @include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {
 //     body {
 //         font-size: 13px;

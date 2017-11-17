@@ -18,7 +18,14 @@
         resize: none;
     }
 }
-
+@include screen(rem-convert("rem", 320px),
+rem-convert("rem", 480px)){
+  .contact {
+    input, textarea {
+      width: 80%;
+    }
+}
+}
 // VALIDATE CONATCT
 // input:required {
 //     border: 1px solid red;

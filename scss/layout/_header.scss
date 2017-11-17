@@ -144,15 +144,34 @@ $menu-width: 150px !default;
 }
 /**
  *
-//  * TABLET SCREEN 350 * 639
-//  *
-//  */
-// @include screen(rem-convert("rem", 350px),
-// rem-convert("rem", 639px)) {
-//     .header-baseline {
-//         font-size: rem-convert("rem", 20px);
-//     }
-// }
+ * SCREEN 320 * 480
+ *
+ */
+@include screen(rem-convert("rem", 320px),
+rem-convert("rem", 480px)) {
+    /*
+      *HEADER
+    */
+
+    $menu-width: 180px;
+
+    .menu{
+      width: $menu-width;
+    }
+    .with--sidebar {
+        .site-pusher {
+            transform: translateX($menu-width);
+        }
+    }
+    .header-baseline {
+      line-height: 1.7;
+    }
+  .down-arrow{
+    margin-top: 65px;
+  }
+
+
+}
 // /**
 //  *
 //  * TABLET SCREEN 640 * 850

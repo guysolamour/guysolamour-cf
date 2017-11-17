@@ -20,7 +20,15 @@
     margin: 0 auto;
     //background-color: rgba(red, .3);
 }
-
+@include screen(rem-convert("rem", 320px),
+rem-convert("rem", 480px)) {
+  .realisation {
+    img {
+      width: 90%;
+      padding: 10px;
+    }
+  }
+}
 // @include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {
 //     .realisation {
 //         img {

@@ -20,7 +20,7 @@ $progress-bar :#2980b9;
     padding-bottom: 25px;
     &-description {
         color: $bgc-color;
-        //padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+        padding: 0 rem-convert('rem', 2px) 0 rem-convert('rem', 2px);
         font-weight: normal;
         text-align: justify;
     }
@@ -70,7 +70,7 @@ $progress-bar :#2980b9;
     }
 }
 
-@include screen(rem-convert("rem", 350px), rem-convert("rem", 639px)) {
+/*@include screen(rem-convert("rem", 350px), rem-convert("rem", 639px)) {
     .skills {
         height: 945px;
     }
@@ -99,7 +99,7 @@ $progress-bar :#2980b9;
         }
     }
 }
-
+*/
 .html-bar {
     @include skill-per(80%);
 }
@@ -160,7 +160,21 @@ $progress-bar :#2980b9;
     @include skill-per(45%);
 }
 
-@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px));
+@include screen(rem-convert("rem", 320px),
+rem-convert("rem", 480px)){
+  .progress {
+    margin: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+  margin-bottom: 10px;
+  }
+  .skills {
+    &-description {
+      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+
+    }
+  }
+}
+
+/*@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px));
 @include min-screen(rem-convert("rem", 1024px)) {
     .skills {
         height: auto;
@@ -189,4 +203,4 @@ $progress-bar :#2980b9;
             text-align: center;
         }
     }
-}
+}*/
