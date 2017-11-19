@@ -38,6 +38,30 @@ rem-convert("rem", 576px)) {
       padding: 10px;
     }
   }
+  .works {
+      //padding: 0 48px;
+      &-description {
+          padding-left: rem-convert('rem', 50px);
+          font-weight: normal;
+      }
+  }
+}
+@include screen(rem-convert("rem", 577px),
+rem-convert("rem", 768px)){
+  .realisation {
+    //padding: 10px;
+    img {
+      width: 90%;
+      padding: 10px;
+    }
+  }
+  .works {
+      //padding: 0 48px;
+      &-description {
+          padding-left: rem-convert('rem', 50px);
+          font-weight: normal;
+      }
+  }
 }
 // @include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {
 //     .realisation {

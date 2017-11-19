@@ -97,6 +97,18 @@ rem-convert("rem", 576px)){
   }
 
 }
+@include screen(rem-convert("rem", 577px),
+rem-convert("rem", 768px)){
+    .description {
+      p{
+        padding-left: rem-convert("rem", 48px);
+        padding-right: rem-convert("rem", 48px);
+      }
+      .detail-tel {
+        margin-bottom: 50px;
+      }
+    }
+}
 // @include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {
 //     body {
 //         font-size: 13px;

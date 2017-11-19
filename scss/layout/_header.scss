@@ -171,7 +171,7 @@ rem-convert("rem", 480px)) {
   }
 
 }
-@include screen(rem-convert("rem", 480px),
+@include screen(rem-convert("rem", 481px),
 rem-convert("rem", 576px)){
   $menu-width: 200px;
   .menu{
@@ -187,6 +187,24 @@ rem-convert("rem", 576px)){
   }
   .down-arrow{
     margin-top: 50px;
+  }
+}
+@include screen(rem-convert("rem", 577px),
+rem-convert("rem", 768px)){
+  $menu-width: 250px;
+  .menu{
+    width: $menu-width;
+  }
+  .with--sidebar {
+      .site-pusher {
+          transform: translateX($menu-width);
+      }
+  }
+  .header-baseline {
+    line-height: 1.6;
+  }
+  .down-arrow{
+    margin-top: 60px;
   }
 }
 // /**
