@@ -64,6 +64,17 @@ $(document).ready(function () {
     // })
 
     //	Add return on top button
+    $(".scroll").click(function () {
+        var section = $("." + this.id);
+        $(".site-content").animate({ scrollTop: section.offset().top }, 'slow');
+    });
+    // On gère l'affichage des progressbar pour les compétences
+    window.sr = ScrollReveal();
+    sr.reveal('.progress-bar', {
+        origin: 'left',
+        duration: 2000,
+        distance: '100%'
+    });
 });
 $(document).ready(function () {
     $('body').append('<div id="returnOnTop" title="Retour en haut">&nbsp;</div>');

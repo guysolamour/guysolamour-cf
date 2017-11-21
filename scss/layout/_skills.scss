@@ -199,7 +199,117 @@ rem-convert("rem", 768px)){
     }
   }
 }
+@include screen(rem-convert("rem", 769px),
+rem-convert("rem", 992px)){
+  .skills {
+    &-description {
+      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
 
+    }
+  }
+  .skills-progress {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+      .skills-left {
+          flex-basis: 49%;
+          margin-right: 10px;
+          .progress {
+              margin-right: 0;
+          }
+      }
+      .skills-right {
+          flex-basis: 49%;
+          .progress {
+              margin-left: 0;
+          }
+      }
+  }
+  .progress {
+      &-sub {
+          width: 20%;
+          font-size: 14px;
+          text-align: center;
+      }
+      &-bar {
+        left: 20%;
+      }
+  }
+
+}
+@include screen(rem-convert("rem", 993px),
+rem-convert("rem", 1199px)){
+  .skills {
+    &-description {
+      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+
+    }
+  }
+  .skills-progress {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+      .skills-left {
+          flex-basis: 49%;
+          margin-right: 10px;
+          .progress {
+              margin-right: 0;
+          }
+      }
+      .skills-right {
+          flex-basis: 49%;
+          .progress {
+              margin-left: 0;
+          }
+      }
+  }
+  .progress {
+      &-sub {
+          width: 20%;
+          font-size: 14px;
+          text-align: center;
+      }
+      &-bar {
+        left: 20%;
+      }
+  }
+}
+@include min-screen(rem-convert("rem", 1200px)){
+  .skills {
+    &-description {
+      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+
+    }
+  }
+  .skills-progress {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+      .skills-left {
+          flex-basis: 49%;
+          margin-right: 10px;
+          .progress {
+              margin-right: 0;
+          }
+      }
+      .skills-right {
+          flex-basis: 49%;
+          .progress {
+              margin-left: 0;
+          }
+      }
+  }
+  .progress {
+      &-sub {
+          width: 20%;
+          font-size: 14px;
+          text-align: center;
+      }
+      &-bar {
+        left: 20%;
+      }
+  }
+}
 /*@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px));
 @include min-screen(rem-convert("rem", 1024px)) {
     .skills {

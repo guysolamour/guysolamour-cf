@@ -34,9 +34,9 @@ $menu-width: 150px !default;
         line-height: 40px;
         border-bottom: 1px solid #fff;
     }
-    a:hover{
-        color: rgba(#fff,.5)
-    }
+    // a:hover{
+    //     color: rgba(#fff,.5)
+    // }
 }
 
 .header__icon {
@@ -110,14 +110,7 @@ $menu-width: 150px !default;
 // //     // width: 100%;
 // //     z-index: 100;
 // // }
-.down-arrow {
-    //position: absolute;
-    //left: 50%;
-    //bottom: rem-convert("rem", -5px);
-    // tac can be used with img
-    //text-align: center;
-    margin-top: 10px;
-}
+
 
 .l-header--bg {
     background: url(../img/header.jpg) center top;
@@ -131,6 +124,7 @@ $menu-width: 150px !default;
     text-align: center;
     color: #ffffff;
     font-size: rem-convert("rem", 25px);
+    position: relative;
     &-l1 {
         font-weight: bold;
         strong {
@@ -142,6 +136,29 @@ $menu-width: 150px !default;
         font-weight: normal;
     }
 }
+.down-arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 50px;
+    img {
+      width: 100%;
+      animation: arrow 1s ease-in-out infinite alternate;
+    }
+
+}
+@keyframes arrow {
+    from {
+      opacity: 1;
+      margin-top: 0;
+    }
+
+    to {
+      opacity: .2;
+      margin-top: 2rem;
+    }
+  }
 /**
  *
  * SCREEN 320 * 480
@@ -167,7 +184,7 @@ rem-convert("rem", 480px)) {
       line-height: 1.7;
     }
   .down-arrow{
-    margin-top: 65px;
+    //margin-top: 65px;
   }
 
 }
@@ -207,112 +224,120 @@ rem-convert("rem", 768px)){
     margin-top: 60px;
   }
 }
-// /**
-//  *
-//  * TABLET SCREEN 640 * 850
-//  *
-//  */
-// @include screen(rem-convert("rem", 640px),
-// rem-convert("rem", 850px)) {
-//     .header-baseline {
-//         font-size: rem-convert("rem", 33px);
-//     }
-//     // .l-header--top {
-//     //     .menu {}
-//     // }
-//     // .site-pusher,
-//     // .site-container {
-//     //     height: 100%;
-//     // }
-//     // .site-container {
-//     //     overflow: hidden;
-//     //     height: 100%;
-//     // }
-//     // .site-content {
-//     //     position: absolute;
-//     //     // top: 66px;
-//     //     left: 0;
-//     //     right: 0;
-//     //     bottom: 0;
-//     //     padding-top: 0;
-//     //     overflow-y: scroll;
-//     //     -webit-overflow-scrolling: touch;
-//     // }
-//     // .site-pusher {
-//     //     height: 100%;
-//     //     transition-duration: 0.3s;
-//     //     transform: translateX(0);
-//     // }
-//     .with--sidebar .site-pusher {
-//         transform: translateX(250px);
-//     }
-//     .with--sidebar .site-cache {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//         background-color: rgba(0, 0, 0, 0.6);
-//     }
-// }
-// /**
-//  *
-//  * DESKTOP SCREEN 851 * 1023
-//  *
-//  */
-// @include screen(rem-convert("rem", 851px),
-// rem-convert("rem", 1023px)) {
-//     .menu nav {
-//         display: block;
-//     }
-//     .menu {
-//         color: #ffffff;
-//         font-size: 18px;
-//         font-weight: 300;
-//         //padding: 5px;
-//         img {
-//             display: none;
-//         }
-//         a {
-//             display: inline-block;
-//             padding: 8px;
-//         }
-//     }
-//     .is-active {
-//         border-bottom: 3px solid #ff4500;
-//     }
-//     .header-baseline {
-//         font-size: rem-convert("rem", 33px);
-//     }
-// }
-// @include min-screen(rem-convert("rem", 1024px)) {
-//     .down-arrow {
-//         bottom: 20px;
-//     }
-//     .menu nav {
-//         display: block;
-//     }
-//     .menu {
-//         color: #ffffff;
-//         font-size: 18px;
-//         font-weight: 300;
-//         //padding: 5px;
-//         img {
-//             display: none;
-//         }
-//         a {
-//             display: inline-block;
-//             padding: 8px;
-//         }
-//     }
-//     .is-active {
-//         border-bottom: 3px solid #ff4500;
-//     }
-//     .header-baseline {
-//         padding-top: 300px;
-//         font-size: rem-convert("rem", 55px);
-//     }
-//     .l-header--bg {
-//         height: 700px;
-//     }
-// }
+@include screen(rem-convert("rem", 769px),
+rem-convert("rem", 992px)){
+  .with--sidebar {
+      .site-pusher {
+          transform: none;
+      }
+      .site-cache{
+        display: none;
+      }
+  }
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  position: static;
+  width: 100%;
+  transform: translateX(0);
+    a{
+      display: inline-block;
+      padding: 10px;
+      border: none;
+    }
+  }
+  .header__icon{
+    visibility: hidden;
+  }
+  .down-arrow {
+    margin-top: 175px;
+  }
+  .l-header--bg {
+    height: 600px;
+  }
+  .header-baseline {
+    font-size: rem-convert("rem", 35px);
+    line-height: 1.6;
+  }
+}
+@include screen(rem-convert("rem", 993px),
+rem-convert("rem", 1199px)){
+  .with--sidebar {
+      .site-pusher {
+          transform: none;
+      }
+      .site-cache{
+        display: none;
+      }
+  }
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  position: static;
+  width: 100%;
+  margin-right: 15px;
+  transform: translateX(0);
+    a{
+      display: inline-block;
+      padding: 10px;
+      border: none;
+    }
+  }
+  div.l-container {
+    width: 900px;
+    margin: 0 auto;
+  }
+  .header__icon{
+    visibility: hidden;
+  }
+  .down-arrow {
+    margin-top: 175px;
+  }
+  .l-header--bg {
+    height: 620px;
+  }
+  .header-baseline {
+    font-size: rem-convert("rem", 35px);
+    line-height: 1.6;
+  }
+}
+@include min-screen(rem-convert("rem", 1200px)){
+  .with--sidebar {
+      .site-pusher {
+          transform: none;
+      }
+      .site-cache{
+        display: none;
+      }
+  }
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    position: static;
+    width: 100%;
+    margin-right: 15px;
+    transform: translateX(0);
+      a{
+        display: inline-block;
+        padding: 10px;
+        border: none;
+      }
+    }
+    div.l-container {
+      width: 1000px;
+      margin: 0 auto;
+    }
+    .header__icon{
+      visibility: hidden;
+    }
+    .down-arrow {
+      margin-top: 175px;
+    }
+    .l-header--bg {
+      height: 700px;
+    }
+    .header-baseline {
+      font-size: rem-convert("rem", 45px);
+      line-height: 1.6;
+    }
+}

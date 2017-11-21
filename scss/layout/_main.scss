@@ -13,10 +13,13 @@
     margin-left: 5px;
 }
 .about {
-  height: 725px;
+  height: 800px;
 }
 .section-title {
     position: relative;
+}
+.detail-info-title {
+  display: none;
 }
 
 .section-title-bare {
@@ -108,6 +111,81 @@ rem-convert("rem", 768px)){
         margin-bottom: 50px;
       }
     }
+}
+@include screen(rem-convert("rem", 769px),
+rem-convert("rem", 992px)){
+  .presentation {
+    display: flex;
+
+    //justify-content: space-around;
+    .description {
+      p{
+        padding-right: 15px;
+      }
+      .surname {
+        text-align: left;
+      }
+      .detail-tel {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .about {
+    height: 450px;
+  }
+  .portrait {
+    margin-top: 0;
+  }
+
+}
+@include screen(rem-convert("rem", 993px),
+rem-convert("rem", 1199px)){
+  .presentation {
+    display: flex;
+
+    //justify-content: space-around;
+    .description {
+      p{
+        padding-right: 15px;
+      }
+      .surname {
+        text-align: left;
+      }
+      .detail-tel {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .about {
+    height: 450px;
+  }
+  .portrait {
+    margin-top: 0;
+  }
+}
+@include min-screen(rem-convert("rem", 1200px)){
+  .presentation {
+    display: flex;
+
+    //justify-content: space-around;
+    .description {
+      p{
+        padding-right: 15px;
+      }
+      .surname {
+        text-align: left;
+      }
+      .detail-tel {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .about {
+    height: 450px;
+  }
+  .portrait {
+    margin-top: 0;
+  }
 }
 // @include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {
 //     body {

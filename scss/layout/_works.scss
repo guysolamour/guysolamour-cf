@@ -63,6 +63,80 @@ rem-convert("rem", 768px)){
       }
   }
 }
+@include screen(rem-convert("rem", 769px),
+rem-convert("rem", 992px)){
+  .realisation {
+         img {
+             display: block;
+             width: 46%;
+         }
+     }
+     .works-line-1,
+     .works-line-2 {
+         display: flex;
+         flex-wrap: wrap;
+     }
+  .realisation {
+    padding: 0 rem-convert('rem', 0px) 0 rem-convert('rem', 48px);
+
+  }
+  .works {
+      //padding: 0 48px;
+      &-description {
+          padding-left: rem-convert('rem', 50px);
+          font-weight: normal;
+      }
+  }
+}
+@include screen(rem-convert("rem", 993px),
+rem-convert("rem", 1199px)){
+  .realisation {
+         img {
+             display: block;
+             width: 46%;
+         }
+     }
+     .works-line-1,
+     .works-line-2 {
+         display: flex;
+         flex-wrap: wrap;
+     }
+  .realisation {
+    padding: 0 rem-convert('rem', 0px) 0 rem-convert('rem', 48px);
+
+  }
+  .works {
+      //padding: 0 48px;
+      &-description {
+          padding-left: rem-convert('rem', 50px);
+          font-weight: normal;
+      }
+  }
+}
+@include min-screen(rem-convert("rem", 1200px)){
+  .realisation {
+         img {
+             display: block;
+             width: 46%;
+         }
+     }
+     .works-line-1,
+     .works-line-2 {
+         display: flex;
+         flex-wrap: wrap;
+     }
+  .realisation {
+    padding: 0 rem-convert('rem', 0px) 0 rem-convert('rem', 48px);
+
+  }
+  .works {
+      //padding: 0 48px;
+      &-description {
+          padding-left: rem-convert('rem', 50px);
+          font-weight: normal;
+      }
+  }
+}
 // @include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {
 //     .realisation {
 //         img {

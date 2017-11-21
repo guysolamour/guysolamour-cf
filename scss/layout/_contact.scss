@@ -2,7 +2,7 @@
     // margin-top: 50px;
     background-color: #282828;
     width: 100%;
-    height: rem-convert('rem', 576px);
+    height: rem-convert('rem', 600px);
     text-align: center;
     position: relative;
     &-des {
@@ -41,6 +41,72 @@ rem-convert("rem", 768px)){
       width: 85%;
     }
 }
+}
+@include screen(rem-convert("rem", 769px),
+rem-convert("rem", 992px)){
+  .contact .input-text {
+      display: inline-block;
+      width: 45%;
+      //height: 100px;
+  }
+  .contact .input-num {
+      display: inline-block;
+      width: 45%;
+      //height: 100px;
+  }
+  .contact .input-email {
+      display: inline-block;
+      width: 96%;
+      //height: 100px;
+  }
+  .contact .input-msg {
+    display: inline-block;
+    width: 96%;
+  }
+
+}
+@include screen(rem-convert("rem", 993px),
+rem-convert("rem", 1199px)){
+  .contact .input-text {
+      display: inline-block;
+      width: 45%;
+      //height: 100px;
+  }
+  .contact .input-num {
+      display: inline-block;
+      width: 45%;
+      //height: 100px;
+  }
+  .contact .input-email {
+      display: inline-block;
+      width: 96%;
+      //height: 100px;
+  }
+  .contact .input-msg {
+    display: inline-block;
+    width: 96%;
+  }
+}
+@include min-screen(rem-convert("rem", 1200px)){
+  .contact .input-text {
+      display: inline-block;
+      width: 45%;
+      //height: 100px;
+  }
+  .contact .input-num {
+      display: inline-block;
+      width: 45%;
+      //height: 100px;
+  }
+  .contact .input-email {
+      display: inline-block;
+      width: 96%;
+      //height: 100px;
+  }
+  .contact .input-msg {
+    display: inline-block;
+    width: 96%;
+  }
 }
 // VALIDATE CONATCT
 // input:required {
