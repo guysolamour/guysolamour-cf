@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     $('#header__icon').on('click', function(e) {
         e.preventDefault();
@@ -14,23 +15,26 @@ $(document).ready(function() {
     // })
 
     //	Add return on top button
-    $(".scroll").click(function() {
+    /*$(".scroll").click(function() {
       var section = $("." + this.id);
       $(".site-content").animate({scrollTop: section.offset().top}, 'slow');
-    });
-    // On gère l'affichage des progressbar pour les compétences
-  window.sr = ScrollReveal();
-  sr.reveal('.progress-bar', {
-    origin: 'left',
-    duration: 2000,
-    distance: '100%'
-  })
+    });*/
+
+    window.sr = ScrollReveal({reset: true});
+
+    var fooContainer = document.querySelector('.site-content');
+      sr.reveal('.html,.css,.js,.php,.mysql,.wp,.ps,.illus,.word,.excel,.jq,.git,.bs,.gulp', {
+               container: fooContainer,
+               origin: 'left',
+               duration: 1000,
+               distance: '100%'
+           });
 
 });
-$(document).ready(function(){
+
   $('body').append('<div id="returnOnTop" title="Retour en haut">&nbsp;</div>');
 
-  //	On button click, let's scroll up to top
+  	//On button click, let's scroll up to top
   $('#returnOnTop').click( function() {
        $('.site-content').animate({scrollTop: 0}, 'slow');
   });
@@ -38,10 +42,10 @@ $(document).ready(function(){
 
   $('.site-content').scroll(function() {
       //	If on top fade the bouton out, else fade it in
-      if ( $(this).scrollTop() <=1000 )
+      if ( $(this).scrollTop() <= 1000 )
          $('#returnOnTop').fadeOut();
       else
          $('#returnOnTop').fadeIn();
 
-  });
+  //jQuery('.menu').singlePageNav();
 })

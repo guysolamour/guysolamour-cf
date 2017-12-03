@@ -61,6 +61,9 @@ $menu-width: 150px !default;
     .site-pusher {
         transform: translateX($menu-width);
     }
+    .menu a:hover {
+      color: gold;
+    }
 }
 
 .with--sidebar .site-cache {
@@ -187,6 +190,12 @@ rem-convert("rem", 480px)) {
     //margin-top: 65px;
   }
 
+  // Suppresion du hover des liens sur mobile
+  .hvr-underline-from-left::before{
+    opacity: 0;
+  }
+
+
 }
 @include screen(rem-convert("rem", 481px),
 rem-convert("rem", 576px)){
@@ -205,6 +214,9 @@ rem-convert("rem", 576px)){
   .down-arrow{
     margin-top: 50px;
   }
+  .hvr-underline-from-left::before{
+    opacity: 0;
+  }
 }
 @include screen(rem-convert("rem", 577px),
 rem-convert("rem", 768px)){
@@ -222,6 +234,9 @@ rem-convert("rem", 768px)){
   }
   .down-arrow{
     margin-top: 60px;
+  }
+  .hvr-underline-from-left::before{
+    opacity: 0;
   }
 }
 @include screen(rem-convert("rem", 769px),

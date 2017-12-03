@@ -4,8 +4,8 @@ module.exports = function() {
             src: './scss/**/*.scss',
             output: 'css'
         },
-        jade: {
-            src: './jade/**/!(_)*.jade', // compiling only jade files not partials _jade
+        pug: {
+            src: './pug/**/!(_)*.pug', // compiling only jade files not partials _jade
             output: '.'
         },
         md: {

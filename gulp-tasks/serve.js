@@ -14,7 +14,7 @@ module.exports = function() {
     });
     gulp.watch(config.scss.src, ['sass']);
     //gulp.watch(config.imagemin.src, ['imagemin']);
-    gulp.watch(config.jade.src, ['jade']);
+    gulp.watch(config.pug.src, ['pug']);
     gulp.watch(config.babel.src, ['babel']);
     //gulp.watch(config.sprite.src, ['sprite']);
     gulp.watch(config.scss.src).on("change", browserSync.reload);

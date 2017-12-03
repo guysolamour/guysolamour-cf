@@ -1,18 +1,14 @@
-/*=============================================
-=            SKILLS VARIABLES            =
-=============================================*/
-
-@function guy($per) {
-    @return ($per*70)/100;
+// /*=============================================
+// =            SKILLS VARIABLES            =
+// =============================================*/
+//
+@mixin progress-per($width){
+  width: $width;
+  background-color: #2980b9;
+  height: 8px;
+  line-height: 32px;
+  z-index: 100;
 }
-
-@mixin skill-per($per) {
-    width: ($per*70)/100;
-}
-
-$progress: white;
-$progress-sub: #66ccff;
-$progress-bar :#2980b9;
 .skills {
     background-color: $skills-color;
     width: 100%;
@@ -24,319 +20,388 @@ $progress-bar :#2980b9;
         font-weight: normal;
         text-align: justify;
     }
-    &-left {
-        margin-bottom: 30px;
-    }
-}
-
-.progress-xs-sub {
-    display: none;
-}
-
-.progress {
-    background-color: $progress;
-    position: relative;
-    display: flex;
-    height: 34px;
-    line-height: 34px;
-    text-align: center;
-    //margin: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-    font-weight: bold;
-    color: white;
-    margin-bottom: 10px;
-    &-sub {
-        background-color: $progress-sub;
-        width: 25%;
-        font-size: 15px;
-    }
-    .progress-bar-white {
-        background-color: white;
-        position: absolute;
-        width: 70%;
-    }
-    &-bar {
-        background-color: $progress-bar;
-        position: absolute;
-        left: 25%;
-        height: 34px;
-        right: 20%;
-    }
-    &-per {
-        position: absolute;
-        height: 34px;
-        right: 0px;
-        width: 15%;
-        background-color: grey;
-    }
-}
-
-/*@include screen(rem-convert("rem", 350px), rem-convert("rem", 639px)) {
-    .skills {
-        height: 945px;
-    }
-    .progress-xs-sub {
-        display: block;
-        color: #ffffff;
-        margin-left: 50px;
-        font-weight: 700;
-        font-size: 13px;
-    }
-    .progress {
-        height: 20px;
-        line-height: 20px;
-        &-sub {
-            display: none;
-        }
-        &-bar {
-            left: 0;
-            //width: 100%;
-            background-color: $progress-bar;
-            height: 20px;
-        }
-        &-per {
-            width: 25%;
-            height: 20px;
-        }
-    }
-}
-*/
-.html-bar {
-    @include skill-per(80%);
-}
-
-.css-bar {
-    @include skill-per(65%);
-}
-
-.js-bar {
-    @include skill-per(50%);
-}
-
-.php-bar {
-    @include skill-per(55%);
-}
-
-.sql-bar {
-    @include skill-per(75%);
-}
-
-.wp-bar {
-    @include skill-per(40%);
-}
-
-.seo-bar {
-    @include skill-per(30%);
-}
-
-.ps-bar {
-    @include skill-per(30%);
-}
-
-.bt-bar {
-    @include skill-per(50%);
-}
-
-.illus-bar {
-    @include skill-per(25%);
-}
-
-.word-bar {
-    @include skill-per(80%);
-}
-
-.excel-bar {
-    @include skill-per(60%);
-}
-
-.git-bar {
-    @include skill-per(35%);
-}
-
-.gulp-bar {
-    @include skill-per(80%);
-}
-
-.jq-bar {
-    @include skill-per(45%);
-}
-
-@include screen(rem-convert("rem", 320px),
-rem-convert("rem", 480px)){
-  .progress {
-    margin: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-  margin-bottom: 10px;
-  }
-  .skills {
-    &-description {
-      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-
-    }
-  }
-}
-@include screen(rem-convert("rem", 480px),
-rem-convert("rem", 576px)){
-  .progress {
-    margin: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-  margin-bottom: 10px;
-  }
-  .skills {
-    &-description {
-      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-
-    }
-  }
-}
-@include screen(rem-convert("rem", 577px),
-rem-convert("rem", 768px)){
-  .progress {
-    margin: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-  margin-bottom: 10px;
-  }
-  .skills {
-    &-description {
-      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-
-    }
-  }
-}
-@include screen(rem-convert("rem", 769px),
-rem-convert("rem", 992px)){
-  .skills {
-    &-description {
-      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-
-    }
-  }
-  .skills-progress {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-      .skills-left {
-          flex-basis: 49%;
-          margin-right: 10px;
-          .progress {
-              margin-right: 0;
-          }
-      }
-      .skills-right {
-          flex-basis: 49%;
-          .progress {
-              margin-left: 0;
-          }
-      }
-  }
-  .progress {
-      &-sub {
-          width: 20%;
-          font-size: 14px;
-          text-align: center;
-      }
-      &-bar {
-        left: 20%;
-      }
-  }
 
 }
-@include screen(rem-convert("rem", 993px),
-rem-convert("rem", 1199px)){
-  .skills {
-    &-description {
-      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-
-    }
-  }
-  .skills-progress {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-      .skills-left {
-          flex-basis: 49%;
-          margin-right: 10px;
-          .progress {
-              margin-right: 0;
-          }
-      }
-      .skills-right {
-          flex-basis: 49%;
-          .progress {
-              margin-left: 0;
-          }
-      }
-  }
-  .progress {
-      &-sub {
-          width: 20%;
-          font-size: 14px;
-          text-align: center;
-      }
-      &-bar {
-        left: 20%;
-      }
-  }
+.skills-container {
+  display: flex;
+  justify-content: space-between;
 }
-@include min-screen(rem-convert("rem", 1200px)){
-  .skills {
-    &-description {
-      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-
-    }
-  }
-  .skills-progress {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
-      .skills-left {
-          flex-basis: 49%;
-          margin-right: 10px;
-          .progress {
-              margin-right: 0;
-          }
-      }
-      .skills-right {
-          flex-basis: 49%;
-          .progress {
-              margin-left: 0;
-          }
-      }
-  }
-  .progress {
-      &-sub {
-          width: 20%;
-          font-size: 14px;
-          text-align: center;
-      }
-      &-bar {
-        left: 20%;
-      }
-  }
+.progress-sub {
+  padding: 0;
+  font-size: 16px;
+  font-weight: 900;
 }
-/*@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px));
-@include min-screen(rem-convert("rem", 1024px)) {
-    .skills {
-        height: auto;
-    }
-    .skills-progress {
-        display: flex;
-        justify-content: space-between;
-        .skills-left {
-            flex-basis: 49%;
-            margin-right: 10px;
-            .progress {
-                margin-right: 0;
-            }
-        }
-        .skills-right {
-            flex-basis: 49%;
-            .progress {
-                margin-left: 0;
-            }
-        }
-    }
-    .progress {
-        &-sub {
-            width: 20%;
-            font-size: 14px;
-            text-align: center;
-        }
-    }
-}*/
+.progress-bar {
+    width: 100%; /* Full width */
+    background-color: #ddd; /* Grey background */
+}
+.skills-left,.skills-right {
+  text-align: left;
+  //border: 1px solid white;
+  flex-basis: 48%;
+}
+.skills {
+    text-align: right; /* Right-align text */
+    padding-right: 20px; /* Add some right padding */
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    color: white; /* White text color */
+}
+
+// Skills left
+.html {@include progress-per(80%)} /* Green */
+.css {@include progress-per(65%)} /* Green */
+.js {@include progress-per(50%)} /* Green */
+.php {@include progress-per(55%)} /* Green */
+.mysql {@include progress-per(75%)} /* Green */
+.wp {@include progress-per(40%)} /* Green */
+.ps {@include progress-per(45%)} /* Green */
+
+// Skills right
+.illus {@include progress-per(25%)} /* Green */
+.word {@include progress-per(80%)} /* Green */
+.excel {@include progress-per(60%)} /* Green */
+.jq {@include progress-per(45%)} /* Green */
+.git {@include progress-per(30%)} /* Green */
+.bs {@include progress-per(50%)} /* Green */
+.gulp {@include progress-per(80%)} /* Green */
+
+
+
+// @function guy($per) {
+//     @return ($per*70)/100;
+// }
+//
+// @mixin skill-per($per) {
+//     width: ($per*70)/100;
+// }
+//
+// $progress: white;
+// $progress-sub: #66ccff;
+// $progress-bar :#2980b9;
+// .skills {
+//     background-color: $skills-color;
+//     width: 100%;
+//     height: auto;
+//     padding-bottom: 25px;
+//     &-description {
+//         color: $bgc-color;
+//         padding: 0 rem-convert('rem', 2px) 0 rem-convert('rem', 2px);
+//         font-weight: normal;
+//         text-align: justify;
+//     }
+//     &-left {
+//         margin-bottom: 30px;
+//     }
+// }
+//
+// .progress-xs-sub {
+//     display: none;
+// }
+//
+// .progress {
+//     background-color: $progress;
+//     position: relative;
+//     display: flex;
+//     height: 34px;
+//     line-height: 34px;
+//     text-align: center;
+//     //margin: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//     font-weight: bold;
+//     color: white;
+//     margin-bottom: 10px;
+//     &-sub {
+//         background-color: $progress-sub;
+//         width: 25%;
+//         font-size: 15px;
+//     }
+//     .progress-bar-white {
+//         background-color: white;
+//         position: absolute;
+//         width: 70%;
+//     }
+//     &-bar {
+//         background-color: $progress-bar;
+//         position: absolute;
+//         left: 25%;
+//         height: 34px;
+//         right: 20%;
+//     }
+//     &-per {
+//         position: absolute;
+//         height: 34px;
+//         right: 0px;
+//         width: 15%;
+//         background-color: grey;
+//     }
+// }
+//
+// /*@include screen(rem-convert("rem", 350px), rem-convert("rem", 639px)) {
+//     .skills {
+//         height: 945px;
+//     }
+//     .progress-xs-sub {
+//         display: block;
+//         color: #ffffff;
+//         margin-left: 50px;
+//         font-weight: 700;
+//         font-size: 13px;
+//     }
+//     .progress {
+//         height: 20px;
+//         line-height: 20px;
+//         &-sub {
+//             display: none;
+//         }
+//         &-bar {
+//             left: 0;
+//             //width: 100%;
+//             background-color: $progress-bar;
+//             height: 20px;
+//         }
+//         &-per {
+//             width: 25%;
+//             height: 20px;
+//         }
+//     }
+// }
+// */
+// .html-bar {
+//     @include skill-per(80%);
+// }
+//
+// .css-bar {
+//     @include skill-per(65%);
+// }
+//
+// .js-bar {
+//     @include skill-per(50%);
+// }
+//
+// .php-bar {
+//     @include skill-per(55%);
+// }
+//
+// .sql-bar {
+//     @include skill-per(75%);
+// }
+//
+// .wp-bar {
+//     @include skill-per(40%);
+// }
+//
+// .seo-bar {
+//     @include skill-per(30%);
+// }
+//
+// .ps-bar {
+//     @include skill-per(30%);
+// }
+//
+// .bt-bar {
+//     @include skill-per(50%);
+// }
+//
+// .illus-bar {
+//     @include skill-per(25%);
+// }
+//
+// .word-bar {
+//     @include skill-per(80%);
+// }
+//
+// .excel-bar {
+//     @include skill-per(60%);
+// }
+//
+// .git-bar {
+//     @include skill-per(35%);
+// }
+//
+// .gulp-bar {
+//     @include skill-per(80%);
+// }
+//
+// .jq-bar {
+//     @include skill-per(45%);
+// }
+//
+// @include screen(rem-convert("rem", 320px),
+// rem-convert("rem", 480px)){
+//   .progress {
+//     margin: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//   margin-bottom: 10px;
+//   }
+//   .skills {
+//     &-description {
+//       padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//
+//     }
+//   }
+// }
+// @include screen(rem-convert("rem", 480px),
+// rem-convert("rem", 576px)){
+//   .progress {
+//     margin: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//   margin-bottom: 10px;
+//   }
+//   .skills {
+//     &-description {
+//       padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//
+//     }
+//   }
+// }
+// @include screen(rem-convert("rem", 577px),
+// rem-convert("rem", 768px)){
+//   .progress {
+//     margin: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//   margin-bottom: 10px;
+//   }
+//   .skills {
+//     &-description {
+//       padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//
+//     }
+//   }
+// }
+// @include screen(rem-convert("rem", 769px),
+// rem-convert("rem", 992px)){
+//   .skills {
+//     &-description {
+//       padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//
+//     }
+//   }
+//   .skills-progress {
+//       display: flex;
+//       justify-content: space-between;
+//       padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//       .skills-left {
+//           flex-basis: 49%;
+//           margin-right: 10px;
+//           .progress {
+//               margin-right: 0;
+//           }
+//       }
+//       .skills-right {
+//           flex-basis: 49%;
+//           .progress {
+//               margin-left: 0;
+//           }
+//       }
+//   }
+//   .progress {
+//       &-sub {
+//           width: 20%;
+//           font-size: 14px;
+//           text-align: center;
+//       }
+//       &-bar {
+//         left: 20%;
+//       }
+//   }
+//
+// }
+// @include screen(rem-convert("rem", 993px),
+// rem-convert("rem", 1199px)){
+//   .skills {
+//     &-description {
+//       padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//
+//     }
+//   }
+//   .skills-progress {
+//       display: flex;
+//       justify-content: space-between;
+//       padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//       .skills-left {
+//           flex-basis: 49%;
+//           margin-right: 10px;
+//           .progress {
+//               margin-right: 0;
+//           }
+//       }
+//       .skills-right {
+//           flex-basis: 49%;
+//           .progress {
+//               margin-left: 0;
+//           }
+//       }
+//   }
+//   .progress {
+//       &-sub {
+//           width: 20%;
+//           font-size: 14px;
+//           text-align: center;
+//       }
+//       &-bar {
+//         left: 20%;
+//       }
+//   }
+// }
+// @include min-screen(rem-convert("rem", 1200px)){
+//   .skills {
+//     &-description {
+//       padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//
+//     }
+//   }
+//   .skills-progress {
+//       display: flex;
+//       justify-content: space-between;
+//       padding: 0 rem-convert('rem', 48px) 0 rem-convert('rem', 48px);
+//       .skills-left {
+//           flex-basis: 49%;
+//           margin-right: 10px;
+//           .progress {
+//               margin-right: 0;
+//           }
+//       }
+//       .skills-right {
+//           flex-basis: 49%;
+//           .progress {
+//               margin-left: 0;
+//           }
+//       }
+//   }
+//   .progress {
+//       &-sub {
+//           width: 20%;
+//           font-size: 14px;
+//           text-align: center;
+//       }
+//       &-bar {
+//         left: 20%;
+//       }
+//   }
+// }
+// /*@include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px));
+// @include min-screen(rem-convert("rem", 1024px)) {
+//     .skills {
+//         height: auto;
+//     }
+//     .skills-progress {
+//         display: flex;
+//         justify-content: space-between;
+//         .skills-left {
+//             flex-basis: 49%;
+//             margin-right: 10px;
+//             .progress {
+//                 margin-right: 0;
+//             }
+//         }
+//         .skills-right {
+//             flex-basis: 49%;
+//             .progress {
+//                 margin-left: 0;
+//             }
+//         }
+//     }
+//     .progress {
+//         &-sub {
+//             width: 20%;
+//             font-size: 14px;
+//             text-align: center;
+//         }
+//     }
+// }*/
