@@ -43,6 +43,12 @@ $('.site-content').scroll(function () {
     if ($(this).scrollTop() <= 1000) $('#returnOnTop').fadeOut();else $('#returnOnTop').fadeIn();
 
     //jQuery('.menu').singlePageNav();
+    //fancy
+    $("[data-fancybox]").fancybox({
+        // Options will go here
+        loop: true,
+        protect: true
+    });
 });
 
 var form = document.getElementById('contact-form');

@@ -14,6 +14,10 @@
     width: 100%;
     height: auto;
     padding-bottom: 25px;
+    //text-align: right; /* Right-align text */
+    //padding-right: 20px; /* Add some right padding */
+    //line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    color: white; /* White text color */
     &-description {
         color: $bgc-color;
         padding: 0 rem-convert('rem', 2px) 0 rem-convert('rem', 2px);
@@ -36,34 +40,29 @@
     background-color: #ddd; /* Grey background */
 }
 .skills-left,.skills-right {
-  text-align: left;
+  //text-align: left;
   //border: 1px solid white;
   flex-basis: 48%;
 }
-.skills {
-    text-align: right; /* Right-align text */
-    padding-right: 20px; /* Add some right padding */
-    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
-    color: white; /* White text color */
-}
+
 
 // Skills left
-.html {@include progress-per(80%)} /* Green */
-.css {@include progress-per(65%)} /* Green */
-.js {@include progress-per(50%)} /* Green */
-.php {@include progress-per(55%)} /* Green */
-.mysql {@include progress-per(75%)} /* Green */
-.wp {@include progress-per(40%)} /* Green */
-.ps {@include progress-per(45%)} /* Green */
+.html {@include progress-per(80%);} /* Green */
+.css {@include progress-per(65%);} /* Green */
+.js {@include progress-per(50%);} /* Green */
+.php {@include progress-per(55%);} /* Green */
+.mysql {@include progress-per(75%);} /* Green */
+.wp {@include progress-per(40%);} /* Green */
+.ps {@include progress-per(45%);} /* Green */
 
 // Skills right
-.illus {@include progress-per(25%)} /* Green */
-.word {@include progress-per(80%)} /* Green */
-.excel {@include progress-per(60%)} /* Green */
-.jq {@include progress-per(45%)} /* Green */
-.git {@include progress-per(30%)} /* Green */
-.bs {@include progress-per(50%)} /* Green */
-.gulp {@include progress-per(80%)} /* Green */
+.illus {@include progress-per(25%);} /* Green */
+.word {@include progress-per(80%);} /* Green */
+.excel {@include progress-per(60%);} /* Green */
+.jq {@include progress-per(45%);} /* Green */
+.git {@include progress-per(30%);} /* Green */
+.bs {@include progress-per(50%);} /* Green */
+.gulp {@include progress-per(80%);} /* Green */
 
 
 

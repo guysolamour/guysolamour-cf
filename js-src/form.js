@@ -48,4 +48,10 @@ $(document).ready(function() {
          $('#returnOnTop').fadeIn();
 
   //jQuery('.menu').singlePageNav();
+  //fancy
+  $("[data-fancybox]").fancybox({
+    // Options will go here
+      loop: true,
+      protect: true
+  });
 })
