@@ -13,7 +13,7 @@
     margin-left: 5px;
 }
 .about {
-  height: 800px;
+  min-height: 710px;
 }
 .section-title {
     position: relative;
@@ -82,34 +82,49 @@
 rem-convert("rem", 480px)){
   .description {
     p{
-      padding-left: rem-convert("rem", 48px);
-      padding-right: rem-convert("rem", 48px);
+      //padding-left: rem-convert("rem", 18px);
+      //padding-right: rem-convert("rem", 18px);
     }
   }
+  .about {
+    min-height: auto;
+  }
 }
+
+
+
 @include screen(rem-convert("rem", 480px),
 rem-convert("rem", 576px)){
   .description {
     p{
-      padding-left: rem-convert("rem", 48px);
-      padding-right: rem-convert("rem", 48px);
+      padding-left: rem-convert("rem", 18px);
+      padding-right: rem-convert("rem", 18px);
     }
     .detail-tel {
       margin-bottom: 45px;
     }
   }
+  /*.about {
+    height: 730px;
+  }*/
+  .about {
+    min-height: auto;
+  }
 
 }
 @include screen(rem-convert("rem", 577px),
-rem-convert("rem", 768px)){
+rem-convert("rem", 770px)){
     .description {
       p{
-        padding-left: rem-convert("rem", 48px);
-        padding-right: rem-convert("rem", 48px);
+        padding-left: rem-convert("rem", 28px);
+        padding-right: rem-convert("rem", 28px);
       }
       .detail-tel {
         margin-bottom: 50px;
       }
+    }
+    .about {
+      min-height: auto;
     }
 }
 @include screen(rem-convert("rem", 769px),
@@ -130,11 +145,14 @@ rem-convert("rem", 992px)){
       }
     }
   }
-  .about {
+  /*.about {
     height: 450px;
-  }
+  }*/
   .portrait {
     margin-top: 0;
+  }
+  .about {
+    min-height: auto;
   }
 
 }
@@ -156,11 +174,14 @@ rem-convert("rem", 1199px)){
       }
     }
   }
-  .about {
+  /*.about {
     height: 450px;
-  }
+  }*/
   .portrait {
     margin-top: 0;
+  }
+  .about {
+    min-height: auto;
   }
 }
 @include min-screen(rem-convert("rem", 1200px)){
@@ -180,11 +201,14 @@ rem-convert("rem", 1199px)){
       }
     }
   }
-  .about {
+  /*.about {
     height: 450px;
-  }
+  }*/
   .portrait {
     margin-top: 0;
+  }
+  .about {
+    min-height: auto;
   }
 }
 // @include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {

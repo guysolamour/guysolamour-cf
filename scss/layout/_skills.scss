@@ -20,9 +20,10 @@
     color: white; /* White text color */
     &-description {
         color: $bgc-color;
+        text-align: center;
         padding: 0 rem-convert('rem', 2px) 0 rem-convert('rem', 2px);
         font-weight: normal;
-        text-align: justify;
+        //text-align: justify;
     }
 
 }
@@ -64,7 +65,38 @@
 .bs {@include progress-per(50%);} /* Green */
 .gulp {@include progress-per(80%);} /* Green */
 
+@include screen(rem-convert("rem", 480px),
+rem-convert("rem", 576px)){
+  .skills-container {
+      padding-left: rem-convert("rem", 18px);
+      padding-right: rem-convert("rem", 18px);
+   
+}
+}
+@include screen(rem-convert("rem", 577px),
+rem-convert("rem", 768px)){
+  .skills-container {
+      padding-left: rem-convert("rem", 48px);
+      padding-right: rem-convert("rem", 48px);
+    }
+      .skills-description {
+        padding-left: rem-convert("rem", 48px);
+          padding-right: rem-convert("rem", 48px)
+      }
+    
+}
 
+@include screen(rem-convert("rem", 769px),
+rem-convert("rem", 992px)){
+  .skills-container {
+      padding-left: rem-convert("rem", 48px);
+      padding-right: rem-convert("rem", 48px);
+    }
+  .skills-description {
+    padding-left: rem-convert("rem", 48px);
+      padding-right: rem-convert("rem", 48px)
+  }
+}
 
 // @function guy($per) {
 //     @return ($per*70)/100;

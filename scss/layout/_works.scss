@@ -1,215 +1,40 @@
 .works {
     //padding: 0 48px;
     &-description {
+        text-align: center;
         padding: rem-convert('rem', 10px);
         font-weight: normal;
     }
 }
-
-.realisation {
-    text-align: center;
-    img {
-        padding: 5px;
-        width: 100%;
-        height: auto;
-    }
+.realisation a img {
+  width: 100%;
+  height: auto;
 }
 
-.l-container {
-    width: 100%;
-    margin: 0 auto;
-    //background-color: rgba(red, .3);
-}
-@include screen(rem-convert("rem", 320px),
-rem-convert("rem", 480px)) {
+@media only screen and (min-width: 480px) {
+  .works-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
   .realisation {
-    img {
-      width: 90%;
-      padding: 10px;
+    margin: 0 28px 0 28px;
+    a {
+      width: 48%;
     }
   }
-}
-@include screen(rem-convert("rem", 480px),
-rem-convert("rem", 576px)) {
-  .realisation {
-    //padding: 10px;
-    img {
-      width: 80%;
-      padding: 10px;
-    }
-  }
-  .works {
-      //padding: 0 48px;
-      &-description {
-          padding-left: rem-convert('rem', 50px);
-          font-weight: normal;
-      }
-  }
-}
-@include screen(rem-convert("rem", 577px),
-rem-convert("rem", 768px)){
-  .realisation {
-    //padding: 10px;
-    img {
-      width: 90%;
-      padding: 10px;
-    }
-  }
-  .works {
-      //padding: 0 48px;
-      &-description {
-          padding-left: rem-convert('rem', 50px);
-          font-weight: normal;
-      }
-  }
-}
-@include screen(rem-convert("rem", 769px),
-rem-convert("rem", 992px)){
-  .realisation {
-         img {
-             display: block;
-             width: 46%;
-         }
-     }
-     .works-line-1,
-     .works-line-2 {
-         display: flex;
-         flex-wrap: wrap;
-     }
-  .realisation {
-    padding: 0 rem-convert('rem', 0px) 0 rem-convert('rem', 48px);
 
+  
+}
+@media only screen and (min-width: 992px) {
+  .works-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
-  .works {
-      //padding: 0 48px;
-      &-description {
-          padding-left: rem-convert('rem', 50px);
-          font-weight: normal;
-      }
+  .realisation a {
+    width: 23%;
   }
 }
-@include screen(rem-convert("rem", 993px),
-rem-convert("rem", 1199px)){
-  .realisation {
-         img {
-             display: block;
-             width: 46%;
-         }
-     }
-     .works-line-1,
-     .works-line-2 {
-         display: flex;
-         flex-wrap: wrap;
-     }
-  .realisation {
-    padding: 0 rem-convert('rem', 0px) 0 rem-convert('rem', 48px);
 
-  }
-  .works {
-      //padding: 0 48px;
-      &-description {
-          padding-left: rem-convert('rem', 50px);
-          font-weight: normal;
-      }
-  }
-}
-@include min-screen(rem-convert("rem", 1200px)){
-  .realisation {
-         img {
-             display: block;
-             width: 46%;
-         }
-     }
-     .works-line-1,
-     .works-line-2 {
-         display: flex;
-         flex-wrap: wrap;
-     }
-  .realisation {
-    padding: 0 rem-convert('rem', 0px) 0 rem-convert('rem', 48px);
-
-  }
-  .works {
-      //padding: 0 48px;
-      &-description {
-          padding-left: rem-convert('rem', 50px);
-          font-weight: normal;
-      }
-  }
-}
-// @include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {
-//     .realisation {
-//         img {
-//             display: inline-block;
-//             width: 90%;
-//         }
-//     }
-// }
-//
-// @include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
-//     .l-container {
-//         width: 600px;
-//         margin: 0 auto;
-//         //background-color: rgba(lime, .3);
-//     }
-//     .realisation {
-//         img {
-//             display: block;
-//             width: 46%;
-//         }
-//     }
-//     .works-line-1,
-//     .works-line-2 {
-//         display: flex;
-//         flex-wrap: wrap;
-//     }
-// }
-//
-// @include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
-//     .l-container {
-//         width: 800px;
-//         margin: 0 auto;
-//         //background-color: rgba(aqua, .3);
-//     }
-//     .realisation {
-//         img {
-//             display: block;
-//             width: 22.5%;
-//         }
-//     }
-//     .works-line-1,
-//     .works-line-2 {
-//         display: flex;
-//     }
-// }
-//
-// @include min-screen(rem-convert("rem", 1024px)) {
-//     .l-container {
-//         width: 955px;
-//         margin: 0 auto;
-//     }
-//     .realisation {
-//         img {
-//             display: block;
-//             max-width: 22.5%;
-//             // max-width: 250px;
-//         }
-//     }
-//     .works-line-1,
-//     .works-line-2 {
-//         display: flex;
-//     }
-// }
-
-// @include min-screen(rem-convert("rem", 1300px)) {
-//     .realisation {
-//         img {
-//             display: block;
-//             max-width: 275px;
-//         }
-//     }
-//     .works-line-1,
-//     .works-line-2 {
-//         display: flex;
-//     }
-// }
+  
