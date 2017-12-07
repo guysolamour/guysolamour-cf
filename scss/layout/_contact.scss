@@ -2,148 +2,58 @@
     // margin-top: 50px;
     background-color: #282828;
     width: 100%;
-    height: rem-convert('rem', 600px);
+    //height: rem-convert('rem', 600px);
     text-align: center;
     position: relative;
+    padding-bottom: 20px;
     &-des {
         color: $bgc-color;
     }
     input,
     textarea {
-        display: block;
-        width: 90%;
+        //display: block;
+        width: 60%;
         margin: 0 auto;
         padding: 10px;
         margin-bottom: 10px;
-        resize: none;
+    }
+    textarea {
+      resize: none;
+      overflow: hidden;
+      width: 90%;
     }
 }
-@include screen(rem-convert("rem", 320px),
-rem-convert("rem", 480px)){
-  .contact {
-    input, textarea {
-      width: 80%;
-    }
+#contact-form {
+  margin: 0 auto;
+  //border: 1px solid red;
+  width: 90%
 }
-}
-@include screen(rem-convert("rem", 480px),
-rem-convert("rem", 576px)) {
-  .contact {
-    input, textarea {
-      width: 70%;
-    }
-}
-}
-@include screen(rem-convert("rem", 577px),
-rem-convert("rem", 768px)){
-  .contact {
-    input, textarea {
-      width: 85%;
-    }
-}
-}
-@include screen(rem-convert("rem", 769px),
-rem-convert("rem", 992px)){
-  .contact .input-text {
-      display: inline-block;
-      width: 45%;
-      //height: 100px;
-  }
-  .contact .input-num {
-      display: inline-block;
-      width: 45%;
-      //height: 100px;
-  }
-  .contact .input-email {
-      display: inline-block;
-      width: 96%;
-      //height: 100px;
-  }
-  .contact .input-msg {
-    display: inline-block;
-    width: 96%;
-  }
 
-}
-@include screen(rem-convert("rem", 993px),
-rem-convert("rem", 1199px)){
-  .contact .input-text {
-      display: inline-block;
-      width: 45%;
-      //height: 100px;
+@media only screen and (min-width: 577px) {
+  .contact {
+    input, textarea {
+      width: 90%;
+    }
   }
-  .contact .input-num {
-      display: inline-block;
-      width: 45%;
-      //height: 100px;
-  }
-  .contact .input-email {
-      display: inline-block;
-      width: 96%;
-      //height: 100px;
-  }
-  .contact .input-msg {
+  .input-text, .input-num {
     display: inline-block;
-    width: 96%;
+    width: 45%;
+  }
+  .input-text {
+    padding-right: 4%;
   }
 }
-@include min-screen(rem-convert("rem", 1200px)){
-  .contact .input-text {
-      display: inline-block;
-      width: 45%;
-      //height: 100px;
-  }
-  .contact .input-num {
-      display: inline-block;
-      width: 45%;
-      //height: 100px;
-  }
-  .contact .input-email {
-      display: inline-block;
-      width: 96%;
-      //height: 100px;
-  }
-  .contact .input-msg {
+@media only screen and (min-width: 993px) {
+  /*.contact {
+    input, textarea {
+      width: 90%;
+    }
+  }*/
+  .input-text, .input-num, .input-email {
     display: inline-block;
-    width: 96%;
+    width: 30%;
+  }
+  .input-text, .input-num {
+    padding-right: 1.2%;
   }
 }
-// VALIDATE CONATCT
-// input:required {
-//     border: 1px solid red;
-// }
-// @include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
-//     .contact .input-text,
-//     .contact .input-num {
-//         display: inline-block;
-//         width: 40%;
-//     }
-//     // .contact input[type="email"] {
-//     //     width: 83.5%;
-//     // }
-//     // .contact textarea {
-//     //     width: 83.5%;
-//     // }
-// }
-// @include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
-//     .contact .input-text {
-//         display: inline-block;
-//         width: 41%;
-//         height: 100px;
-//     }
-//     .contact .input-num {
-//         display: inline-block;
-//         width: 41%;
-//         height: 100px;
-//     }
-// }
-// @include min-screen(rem-convert("rem", 1024px)) {
-//     .contact .input-text {
-//         display: inline-block;
-//         width: 41%;
-//     }
-//     .contact .input-num {
-//         display: inline-block;
-//         width: 41%;
-//     }
-// }
