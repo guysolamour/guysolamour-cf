@@ -10,7 +10,7 @@ $(document).ready(function() {
     })
 
 
-  
+
 
     window.sr = ScrollReveal({reset: true});
 
@@ -41,15 +41,15 @@ $(document).ready(function() {
     $("[data-fancybox]").fancybox({
       // Options will go here
         loop: true,
-        protect: true
+        //protect: true
     });
-  
-    
+
+
      $('[data-confirm]').on('click', function(e) {
            e.preventDefault();
            //Annuler l'action par dÃ©faut
            //RÃ©cupÃ©rer la valeur de l'attribut href
-           var href = $(this).attr('href');
+           var href = $(this).attr('href')
 
            //On aurait pu Ã©crire aussi
            //var message = $(this).attr('data-confirm');
@@ -71,11 +71,32 @@ $(document).ready(function() {
                }
            });
        });
+       // ce selecteur est à revoir "a[href^=#]"
+       if ($('body').hasClass('with--sidebar')){
+         console.log('juste')
+       }
+       /*$(".menu a").on('click', function(ev){
+        		ev.preventDefault()
+
+        		//déclaration des variables
+        		let cible,hauteur;
+
+        		// recuperer l'attribut href du lien cliqué
+        		cible = $(this).attr('href')
+
+        		// verifier si l'attribut href selection
+        		//correspon à l' id d'un élement dans la page
+
+        		if($(cible).length >= 1){
+        			hauteur = $(cible).offset().top
+        		}
+
+        		// animation du scroll
+              $('.site-content').animate({
+          			scrollTop: hauteur
+          		},1000)
+
+              // console.log($('body').hasClass('with--sidebar'))
+      })*/
 
 })
-  
-
-  
-  
-
-

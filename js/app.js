@@ -34,8 +34,8 @@ $(document).ready(function () {
     //fancy
     $("[data-fancybox]").fancybox({
         // Options will go here
-        loop: true,
-        protect: true
+        loop: true
+        //protect: true
     });
 
     $('[data-confirm]').on('click', function (e) {
@@ -64,6 +64,27 @@ $(document).ready(function () {
             }
         });
     });
+    // ce selecteur est à revoir "a[href^=#]"
+    if ($('body').hasClass('with--sidebar')) {
+        console.log('juste');
+    }
+    /*$(".menu a").on('click', function(ev){
+     		ev.preventDefault()
+      		//déclaration des variables
+     		let cible,hauteur;
+      		// recuperer l'attribut href du lien cliqué
+     		cible = $(this).attr('href')
+      		// verifier si l'attribut href selection
+     		//correspon à l' id d'un élement dans la page
+      		if($(cible).length >= 1){
+     			hauteur = $(cible).offset().top
+     		}
+      		// animation du scroll
+           $('.site-content').animate({
+       			scrollTop: hauteur
+       		},1000)
+            // console.log($('body').hasClass('with--sidebar'))
+    })*/
 });
 
 var form = document.getElementById('contact-form');
