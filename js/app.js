@@ -1,13 +1,20 @@
 'use strict';
 
 $(document).ready(function () {
-    $('#header__icon').on('click', function (e) {
+    $('.menu-icon').on('click', function (e) {
         e.preventDefault();
         $('body').toggleClass('with--sidebar');
+
+        if ($(this).hasClass('is-opened')) {
+            $(this).addClass('is-closed').removeClass('is-opened');
+        } else {
+            $(this).removeClass('is-closed').addClass('is-opened');
+        }
     });
 
     $('#site-cache,.menu a').on('click', function () {
         $('body').removeClass('with--sidebar');
+        $('.menu-icon').removeClass('is-opened');
     });
 
     window.sr = ScrollReveal({ reset: true });

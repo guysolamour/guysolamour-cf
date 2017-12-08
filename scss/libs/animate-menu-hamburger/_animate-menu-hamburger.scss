@@ -1,0 +1,64 @@
+.menu-icon {
+
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #012;
+  //left: 50%;
+}
+
+.menu-icon span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translateX(-50%) translateY(-50%);
+  width: 22px;
+  height: 2px;
+  background-color: #ddd;
+}
+.menu-icon span::before, .menu-icon span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background-color: #ddd;
+  display: block;
+  transform: translateY(-6px);
+  transition: transform 0.5s;
+}
+.menu-icon span::after {transform: translateY(6px);}
+.menu-icon:hover span::before {
+  transform: translateY(-8px);
+}
+.menu-icon:hover span::after {
+  transform: translateY(8px);
+}
+.menu-icon svg {
+  stroke-width: 1px;
+  stroke: #fff;
+  stroke-dasharray: 170;
+  stroke-dashoffset: 170;
+}
+.menu-icon {
+  transition: transform 0.5s;
+}
+.menu-icon.is-opened {
+  transform: rotate(180deg);
+}
+.menu-icon.is-opened span {
+  background: transparent;
+}
+.menu-icon.is-opened span::before {
+  transform: translateY(0) rotate(45deg);
+}
+.menu-icon.is-opened span::after {
+  transform: translateY(0) rotate(-45deg);
+
+}
+.menu-icon span {
+  transition: background 0.5s, transform 0.5s;
+}
