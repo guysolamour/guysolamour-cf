@@ -3,7 +3,9 @@
 }
 
 // VARIABLES
-$font-family: "Open Sans";
+$open-sans: "Open Sans", sans-serif;
+$roboto : "Roboto", sans-serif;
+$kreon : "Kreon", sans-serif;
 //$color-link: blue;
 $bgc-color: #f3f3f3;
 $second-color: #ff4800;
@@ -25,7 +27,7 @@ body {
     -webkit-font-smoothing: antialiased;
     background-color: $bgc-color;
     //color: $color-text;
-    //font-family: $font-family;
+    font-family: $open-sans;
     min-height: 100%;
     //overflow-x: hidden;
     text-rendering: optimizeLegibility;
@@ -43,6 +45,7 @@ a {
     margin-top: rem-convert("rem", 28px);
     text-align: center;
     font-size: rem-convert("rem", 30px);
+    font-family: $kreon;
 }
 
 .dark-section-title {

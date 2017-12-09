@@ -37,12 +37,7 @@
 .menu-icon:hover span::after {
   transform: translateY(8px);
 }
-.menu-icon svg {
-  stroke-width: 1px;
-  stroke: #fff;
-  stroke-dasharray: 170;
-  stroke-dashoffset: 170;
-}
+
 .menu-icon {
   transition: transform 0.5s;
 }

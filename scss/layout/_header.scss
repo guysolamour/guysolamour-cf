@@ -57,44 +57,35 @@ $menu-width: 150px !default;
     width: $menu-width;
     background-color: rgba(#012,.8);
     transform: translateX(-100%);
+    //padding-top: 66px;
     //z-index: 10;
     a {
-        font-size: 18px;
+        font-size: 14px;
         display: block;
         height: 40px;
         text-align: center;
         line-height: 40px;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid #000;
+        color: #6D7A8B;
+        font-weight: 900;
+        padding: 10px;
     }
-    // a:hover{
-    //     color: rgba(#fff,.5)
-    // }
-}
 
-/*.header__icon {
-    display: block;
-    width: 50px;
-    height: 66px;
-    position: relative;
-    cursor: pointer;
-    &::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 16px;
-        top: 16px;
-        left: 15px;
-        height: 0px;
-        box-shadow: 0px 10px 0px 1px, 0px 16px 0px 1px #fff, 0px 22px 0px 1px #fff;
-    }
-}*/
+}
+.menu > a {
+  border-top: 1px solid #000;
+}
 
 .with--sidebar {
     .site-pusher {
         transform: translateX($menu-width);
     }
+    .menu {
+      padding-top: 66px;
+    }
     .menu a:hover {
-      color: gold;
+      background-color: #485361;
+      color: #fff;
     }
 }
 
@@ -113,7 +104,6 @@ $menu-width: 150px !default;
 }
 
 .site-pusher {
-    //height: 100%;
     transform: translateX(0px);
     transition-duration: 0.3s;
 }
@@ -141,26 +131,27 @@ $menu-width: 150px !default;
 
 
 .l-header--bg {
-    background: url(../img/header.jpg) center top;
-    background-size: cover;
+    background: url(../img/header.jpg) center top no-repeat;
+    background-size: 100% 100%;
     max-width: 100%;
-    height: rem-convert("rem", 430px);
+    //height: rem-convert("rem", 500px);
+    height: 300px;
 }
 .header-baseline {
-  line-height: 1.4;
-    padding-top: rem-convert("rem", 220px);
+    line-height: 1.4;
+    padding-top: 30%;
     text-align: center;
-    color: #ffffff;
-    font-size: rem-convert("rem", 25px);
+    color: lighten(#000,20%);
+    font-size: rem-convert("rem", 20px);
     position: relative;
     &-l1 {
         font-weight: bold;
         strong {
-            color: #cd2542;
+            color: #e74c3c;
         }
     }
     &-l2 {
-        font-family: "20th Century Font";
+        font-family: $kreon;
         font-weight: normal;
     }
 }
@@ -202,6 +193,7 @@ rem-convert("rem", 480px)) {
 
     .menu{
       width: $menu-width;
+
     }
     .with--sidebar {
         .site-pusher {
@@ -210,6 +202,7 @@ rem-convert("rem", 480px)) {
     }
     .header-baseline {
       line-height: 1.7;
+      padding-top: 20%;
     }
   .down-arrow{
     //margin-top: 65px;
@@ -231,13 +224,15 @@ rem-convert("rem", 576px)){
   }
   .header-baseline {
     line-height: 2;
+    padding-top: 20%;
+    font-size: 23px;
   }
   .down-arrow{
     margin-top: 50px;
   }
 }
 @include screen(rem-convert("rem", 577px),
-rem-convert("rem", 768px)){
+rem-convert("rem", 770px)){
   $menu-width: 250px;
   .menu{
     width: $menu-width;
@@ -249,9 +244,14 @@ rem-convert("rem", 768px)){
   }
   .header-baseline {
     line-height: 1.6;
+    font-size: 25px;
+    padding-top: 20%;
   }
   .down-arrow{
     margin-top: 60px;
+  }
+   .l-header--bg {
+    height: 430px;
   }
 }
 @include screen(rem-convert("rem", 769px),
@@ -270,11 +270,18 @@ rem-convert("rem", 992px)){
   position: static;
   width: 100%;
   transform: translateX(0);
+  padding-top: 0;
     a{
+      font-size: 18px;
       display: inline-block;
       padding: 10px;
       border: none;
+      color: #fff;
+      font-weight: normal;
     }
+  }
+  .menu > a {
+    border-top: none;
   }
   .menu-icon{
     visibility: hidden;
@@ -283,11 +290,12 @@ rem-convert("rem", 992px)){
     margin-top: 175px;
   }
   .l-header--bg {
-    height: 600px;
+    height: 500px;
   }
   .header-baseline {
     font-size: rem-convert("rem", 35px);
     line-height: 1.6;
+    padding-top: 20%;
   }
   @include menu-hover();
 }
@@ -308,10 +316,14 @@ rem-convert("rem", 1199px)){
   width: 100%;
   margin-right: 15px;
   transform: translateX(0);
+  padding-top: 0;
     a{
+      font-size: 18px;
       display: inline-block;
       padding: 10px;
       border: none;
+      color: white;
+      font-weight: normal;
     }
   }
   div.l-container {
@@ -330,6 +342,10 @@ rem-convert("rem", 1199px)){
   .header-baseline {
     font-size: rem-convert("rem", 35px);
     line-height: 1.6;
+    padding-top: 20%;
+  }
+  .menu > a {
+    border-top: none;
   }
   @include menu-hover();
 }
@@ -349,6 +365,7 @@ rem-convert("rem", 1199px)){
     width: 100%;
     margin-right: 15px;
     transform: translateX(0);
+    padding-top: 0;
       a{
         display: inline-block;
         padding: 10px;
@@ -371,6 +388,8 @@ rem-convert("rem", 1199px)){
     .header-baseline {
       font-size: rem-convert("rem", 45px);
       line-height: 1.6;
+      font-size: 50px;
+      padding-top: 20%;
     }
     @include menu-hover();
 }
