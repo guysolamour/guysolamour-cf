@@ -26,7 +26,7 @@ module.exports = function() {
         .pipe(gulp.dest(config.sitePublic.output+"/img"))
 
     // move other files
-     gulp.src(["humans.txt","robots.txt","favicon.ico","README.md",".htaccess"])
+     gulp.src(["humans.txt","sitemap.xml","robots.txt","favicon.ico","README.md",".htaccess"])
         .pipe($.plumber({
             errorHandler: $.notify.onError("ERROR: USEREF Complilation Failed")
         }))

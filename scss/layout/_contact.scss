@@ -28,7 +28,11 @@
   //border: 1px solid red;
   width: 90%
 }
-
+::placeholder {
+  //color: #f3f3f3;
+  font-size: .9em;
+  font-style: italic;
+}
 @media only screen and (min-width: 577px) {
   .contact {
     input, textarea {
