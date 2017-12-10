@@ -47,13 +47,10 @@
         font-family: $kreon;
     }
     p {
-        //padding-left: rem-convert("rem", 48px);
-        //padding-right: rem-convert("rem", 48px);
         padding: 0 0 0 1px;
         text-align: justify;
     }
     .detail {
-        //padding: 0 rem-convert("rem", 48px) rem-convert("rem", 23px) rem-convert("rem", 48px);
         text-align: center;
         font-weight: bold;
         line-height: .9;
@@ -79,23 +76,13 @@
     font-size: 30px;
     margin-bottom: 0;
 }
-@include screen(rem-convert("rem", 320px),
-rem-convert("rem", 480px)){
-  .description {
-    p{
-      //padding-left: rem-convert("rem", 18px);
-      //padding-right: rem-convert("rem", 18px);
-    }
-  }
+
+@media only screen and (min-width: 320px){
   .about {
     min-height: auto;
-  }
+  } 
 }
-
-
-
-@include screen(rem-convert("rem", 480px),
-rem-convert("rem", 576px)){
+@media only screen and (min-width: 480px){
   .description {
     p{
       padding-left: rem-convert("rem", 18px);
@@ -105,31 +92,18 @@ rem-convert("rem", 576px)){
       margin-bottom: 45px;
     }
   }
-  /*.about {
-    height: 730px;
-  }*/
   .about {
     min-height: auto;
   }
-
 }
-@include screen(rem-convert("rem", 577px),
-rem-convert("rem", 770px)){
-    .description {
-      p{
-        padding-left: rem-convert("rem", 28px);
-        padding-right: rem-convert("rem", 28px);
-      }
-      .detail-tel {
+@media only screen and (min-width: 577px){
+  .description {
+    .detail-tel {
         margin-bottom: 50px;
       }
-    }
-    .about {
-      min-height: auto;
-    }
+  }
 }
-@include screen(rem-convert("rem", 769px),
-rem-convert("rem", 992px)){
+@media only screen and (min-width: 769px){
   .presentation {
     display: flex;
 
@@ -145,152 +119,4 @@ rem-convert("rem", 992px)){
         margin-bottom: 50px;
       }
     }
-  }
-  /*.about {
-    height: 450px;
-  }*/
-  .portrait {
-    margin-top: 0;
-  }
-  .about {
-    min-height: auto;
-  }
-
 }
-@include screen(rem-convert("rem", 993px),
-rem-convert("rem", 1199px)){
-  .presentation {
-    display: flex;
-
-    //justify-content: space-around;
-    .description {
-      p{
-        padding-right: 15px;
-      }
-      .surname {
-        text-align: left;
-      }
-      .detail-tel {
-        margin-bottom: 50px;
-      }
-    }
-  }
-  /*.about {
-    height: 450px;
-  }*/
-  .portrait {
-    margin-top: 0;
-  }
-  .about {
-    min-height: auto;
-  }
-}
-@include min-screen(rem-convert("rem", 1200px)){
-  .presentation {
-    display: flex;
-
-    //justify-content: space-around;
-    .description {
-      p{
-        padding-right: 15px;
-      }
-      .surname {
-        text-align: left;
-      }
-      .detail-tel {
-        margin-bottom: 50px;
-      }
-    }
-  }
-  /*.about {
-    height: 450px;
-  }*/
-  .portrait {
-    margin-top: 0;
-  }
-  .about {
-    min-height: auto;
-  }
-}
-// @include screen(rem-convert("rem", 320px), rem-convert("rem", 639px)) {
-//     body {
-//         font-size: 13px;
-//     }
-//     .about {
-//         height: auto;
-//     }
-//     .description {
-//         .detail-info::before {
-//             content: none;
-//         }
-//     }
-//     .section-title {
-//         font-size: 25px;
-//     }
-//     .surname {
-//         font-size: 22px;
-//     }
-// }
-
-// @include screen(rem-convert("rem", 640px), rem-convert("rem", 850px)) {
-//     .section-title {
-//         font-size: 33px;
-//     }
-//     .presentation {
-//         display: flex;
-//         justify-content: space-between;
-//     }
-//     .portrait img {
-//         max-width: 100%;
-//         height: auto;
-//         display: block;
-//         flex-basis: 40%;
-//     }
-//     .description {
-//         flex-basis: 55%;
-//         height: 380px;
-//         p {
-//             //padding-right: 0;
-//             padding-left: 0;
-//         }
-//     }
-//     .description .surname {
-//         text-align: left;
-//     }
-// }
-
-// @include screen(rem-convert("rem", 851px), rem-convert("rem", 1023px)) {
-//     .section-title {
-//         font-size: 33px;
-//     }
-//     .portrait {
-//         margin-top: 0;
-//     }
-//     .presentation {
-//         display: flex;
-//         justify-content: space-between;
-//     }
-//     .description .surname {
-//         padding-left: 45px;
-//         text-align: left;
-//         font-size: 27px;
-//     }
-// }
-
-// @include min-screen(rem-convert("rem", 1024px)) {
-//     .section-title {
-//         font-size: 33px;
-//     }
-//     .portrait {
-//         margin-top: 0;
-//     }
-//     .presentation {
-//         display: flex;
-//         justify-content: space-between;
-//     }
-//     .description .surname {
-//         padding-left: 45px;
-//         text-align: left;
-//         font-size: 27px;
-//     }
-// }
